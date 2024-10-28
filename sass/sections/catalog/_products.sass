@@ -116,6 +116,8 @@ section.products
                     grid-auto-columns: 1fr
 
                 button
+                    +screen(xl)
+                        order: 2
                     +screen(m)
                         width: 100%
 
@@ -126,9 +128,11 @@ section.products
                     justify-items: center
                     height: 100%
                     width: 65px
+                    height: 50px
                     border: 1px solid $black
                     +screen(xl)
                         width: 50px
+                        order: 1
                     +screen(m)
                         position: absolute
                         top: 15px
@@ -224,10 +228,17 @@ section.products
             border: 2px solid $black
             div.main
                 div.order
+                    button
+                        opacity: 0
+                        pointer-events: none
+                        +screen(m)
+                            display: none
                     div.more
                         img
                             transform: rotate(225deg)
             div.additional
                 height: auto
                 z-index: 2
+                +screen(m)
+                    margin-top: -55px
 

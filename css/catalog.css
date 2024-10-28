@@ -167,6 +167,13 @@ section.products div.product div.main div.order {
     grid-auto-columns: 1fr;
   }
 }
+@media (max-width: 1600px) {
+  section.products div.product div.main div.order button {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
 @media (max-width: 960px) {
   section.products div.product div.main div.order button {
     width: 100%;
@@ -181,11 +188,15 @@ section.products div.product div.main div.order div.more {
   justify-items: center;
   height: 100%;
   width: 65px;
+  height: 50px;
   border: 1px solid #1d1d1b;
 }
 @media (max-width: 1600px) {
   section.products div.product div.main div.order div.more {
     width: 50px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
 }
 @media (max-width: 960px) {
@@ -309,6 +320,15 @@ section.products div.product.open {
   border-bottom: unset;
   border: 2px solid #1d1d1b;
 }
+section.products div.product.open div.main div.order button {
+  opacity: 0;
+  pointer-events: none;
+}
+@media (max-width: 960px) {
+  section.products div.product.open div.main div.order button {
+    display: none;
+  }
+}
 section.products div.product.open div.main div.order div.more img {
   -webkit-transform: rotate(225deg);
       -ms-transform: rotate(225deg);
@@ -317,6 +337,11 @@ section.products div.product.open div.main div.order div.more img {
 section.products div.product.open div.additional {
   height: auto;
   z-index: 2;
+}
+@media (max-width: 960px) {
+  section.products div.product.open div.additional {
+    margin-top: -55px;
+  }
 }
 
 section.documents {
