@@ -7,7 +7,7 @@ mixin product(image, title, price)
                 strong= price
                 span за 1 тонну
             div.order
-                button.yellow Оставить заявку
+                button(data-modal-target="proposal").yellow Оставить заявку
                 div(onclick="openProduct(this)").more: img(src="images/more.svg", alt="")
         div.additional
             div.wrap
