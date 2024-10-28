@@ -1,0 +1,22 @@
+// Общее 
+@import common/_variables
+@import common/_mixins
+
+//Секции
+section.pages
+    padding-top: 80px
+    padding-bottom: 80px
+    +screen(m)
+        padding-top: 60px
+        padding-bottom: 60px
+
+    div.list
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 20px
+
+    a.button
+        border: 1px solid rgba(0,0,0,0.2)
+        outline: 0px solid transparent
+        &:hover
+            border: unset

@@ -1,0 +1,22 @@
+section.pages {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+@media (max-width: 960px) {
+  section.pages {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+section.pages div.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+section.pages a.button {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: 0px solid transparent;
+}
+section.pages a.button:hover {
+  border: unset;
+}/*# sourceMappingURL=pages.css.map */
