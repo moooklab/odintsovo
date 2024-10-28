@@ -1,0 +1,101 @@
+section.objects
+    padding-top: 80px
+    padding-bottom: 80px
+    background: $black
+    color: $white
+    +screen(m)
+        padding-top: 20px
+        padding-bottom: 32px
+
+    div.container
+        display: grid
+        align-items: start
+        grid-template-columns: 1fr max-content
+        grid-gap: 32px
+        +screen(s)
+            grid-template-columns: 1fr
+            grid-gap: 20px
+
+        div.text
+            display: grid
+            grid-gap: 32px
+            max-width: 489px
+            margin-bottom: 72px
+            +screen(m)
+                grid-gap: 10px
+                margin-bottom: 20px
+            p
+                line-height: 130%
+                opacity: 0.7
+                +screen(m)
+                    font-size: 12px
+                    line-height: 120%
+
+    a.button.mobile, a.button.desktop
+        border: 1px solid $yellow
+        color: $yellow
+        &:hover
+            color: $black
+
+    a.button.desktop
+        display: block
+        +screen(s)
+            display: none
+    a.button.mobile
+        display: none
+        +screen(s)
+            display: block
+            margin-top: 20px
+
+    div.slider
+        display: grid
+
+        div.swiper
+            width: 100%
+            min-width: 0
+            overflow: visible
+            max-width: 1770px
+
+        a.object
+            img
+                width: 100%
+                aspect-ratio: 7 / 8
+                object-fit: cover
+                object-position: center center
+                margin-bottom: 55px
+                +screen(m)
+                    margin-bottom: 20px
+            div.description
+                display: grid
+                grid-gap: 10px
+                opacity: 0
+                transition: opacity 0.3s
+                +screen(l)
+                    opacity: 1
+                    grid-gap: 7px
+            span.date
+                font-weight: 400
+                font-size: 12px
+                line-height: 130%
+                text-transform: uppercase
+                opacity: 0.5
+            strong
+                font-weight: 600
+                font-size: 14px
+                line-height: 130%
+                opacity: 0.7
+                +screen(m)
+                    font-size: 12px
+                    line-height: 120%
+            p
+                font-weight: 400
+                font-size: 14px
+                line-height: 130%
+                opacity: 0.7
+                +screen(m)
+                    font-size: 12px
+                    line-height: 120%
+            &:hover
+                div.description
+                    opacity: 1
+

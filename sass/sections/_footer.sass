@@ -1,0 +1,257 @@
+footer
+
+    div.container.top
+        display: grid
+        align-items: start
+        grid-template-areas: 'Logotype Menu Contacts Buttons' 'Socials Menu Contacts Buttons'
+        grid-template-rows: max-content 1fr
+        grid-auto-flow: column
+        grid-auto-columns: max-content
+        justify-content: space-between
+        grid-gap: 18px 60px
+        position: relative
+        padding-top: 40px
+        padding-bottom: 40px
+        +screen(xl)
+            grid-template-areas: 'Logotype Menu Buttons' 'Socials Contacts Buttons'
+            grid-template-columns: max-content 1fr max-content
+        +screen(l)
+            grid-template-areas: 'Logotype Menu Contacts Buttons' 'Socials Menu Contacts Buttons'
+        +screen(m)
+            grid-template-areas: 'Logotype Menu' 'Socials Menu' 'Contacts Buttons'
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 20px 60px
+            padding-top: 20px
+            padding-bottom: 20px
+        +screen(s)
+            grid-template-areas: 'Logotype' 'Menu' 'Contacts' 'Buttons' 'Socials'
+            grid-template-columns: 1fr
+
+        &::after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 0
+            height: 1px
+            background: rgba(29, 29, 27, 0.2)
+            transition: width 1s
+
+        a.logotype
+            grid-area: Logotype
+            display: block
+            line-height: 0px
+            width: 150px
+            svg
+                width: 100%
+                height: auto
+
+            +screen(xl)
+                width: 120px
+            +screen(s)
+                order: 2
+                width: 90px
+
+        div.buttons
+            grid-area: Buttons
+            display: grid
+            grid-gap: 10px
+            width: 195px
+            +screen(s)
+                width: 100%
+
+            div.price
+                cursor: pointer
+                display: grid
+                grid-auto-flow: column
+                grid-auto-columns: max-content
+                align-items: center
+                justify-content: center
+                grid-gap: 10px
+                outline: 1px solid $black
+                padding: 12px 32px
+                font-weight: 500
+                font-size: 14px
+                line-height: 130%
+                letter-spacing: 0.01em
+                text-transform: uppercase
+                background: transparent
+                transition: background .3s
+                +screen(m)
+                    padding: 8px 24px
+                    font-size: 12px
+                    img
+                        height: 24px
+                &:hover
+                    background: $yellow
+                    outline-color: $yellow
+                    outline-width: 1px
+
+        div.socials
+            grid-area: Socials
+            display: grid
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            grid-gap: 10px
+
+            a
+                display: grid
+                align-items: center
+                justify-content: center
+                width: 38px
+                height: 38px
+                outline: 1px solid $black
+                border-radius: 19px
+                transition: all .15s
+                svg
+                    path
+                        transition: all .15s
+
+
+                &:hover
+                    background: $yellow
+                    outline: unset
+                    svg
+                        path
+                            stroke: transparent
+                            fill: $black
+
+        menu
+            grid-area: Menu
+            display: grid
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            grid-gap: 30px
+            font-weight: 400
+            font-size: 14px
+            text-transform: uppercase
+            +screen(xl)
+                grid-gap: 20px
+            +screen(l)
+                grid-auto-flow: row
+                grid-gap: 10px
+            +screen(m)
+                font-weight: 400
+                font-size: 12px
+                text-transform: uppercase
+                color: $black
+
+            li
+                position: relative
+                display: grid
+                width: max-content
+                a
+                    padding: 5px 0
+                    +screen(m)
+                        padding: 0
+                &:after
+                    content: ''
+                    position: absolute
+                    top: 100%
+                    left: 0
+                    width: 0
+                    height: 2px
+                    background: $yellow
+                    transition: width .3s
+                &:hover
+                    &::after
+                        width: 100%
+
+        div.contacts
+            grid-area: Contacts
+            display: grid
+            grid-gap: 37px
+            +screen(xl)
+                grid-template-columns: repeat(2,max-content)
+                align-items: start
+            +screen(l)
+                grid-template-columns: 1fr
+            +screen(m)
+                grid-gap: 18px
+
+
+            div.adress
+                display: grid
+                grid-gap: 5px
+                +screen(m)
+                    grid-gap: 4px
+                p
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 130%
+                    +screen(m)
+                        font-size: 14px
+
+            div.phone
+                display: grid
+                grid-gap: 5px
+                +screen(m)
+                    grid-gap: 4px
+                a.tel
+                    font-weight: 400
+                    font-size: 28px
+                    line-height: 140%
+                    +screen(m)
+                        font-size: 20px
+                a.mail
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 140%
+                    +screen(m)
+                        font-size: 12px
+                    &:hover
+                        text-decoration: underline
+
+            span
+                font-weight: 400
+                font-size: 12px
+                line-height: 140%
+                letter-spacing: 0.02em
+                text-transform: uppercase
+                opacity: 0.5
+
+    div.container.bottom
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        padding-bottom: 40px
+        +screen(m)
+            grid-template-columns: 1fr
+            grid-gap: 15px
+            padding-bottom: 20px
+
+        span
+            font-weight: 300
+            font-size: 14px
+            color: $black
+            opacity: 0.7
+            +screen(m)
+                font-size: 12px
+
+        a.personal
+            font-weight: 300
+            font-size: 14px
+            color: $black
+            text-decoration: underline
+            opacity: 0.7
+            width: max-content
+            +screen(m)
+                font-size: 12px
+                width: auto
+            &:hover
+                text-decoration: none
+                opacity: 1
+
+        a.mwi
+            opacity: 0.5
+            justify-self: end
+            width: max-content
+            +screen(m)
+                justify-self: start
+            &:hover
+                opacity: 1
+                
+
+    &.start
+        div.container.top
+            &::after
+                width: 100%

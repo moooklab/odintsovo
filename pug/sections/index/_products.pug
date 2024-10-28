@@ -1,0 +1,21 @@
+mixin product(image, title)
+    a(href="product.html").product
+        img(src=image, alt="")
+        h3 !{title}
+
+section.products
+    div.container
+        div.text
+            h2.underline Продукция
+            p Один из крупнейших поставщиков высококачественных асфальтобетонных смесей в России.
+        a(href="catalog.html").button.border смотреть все категории
+
+        div.list
+            +product('images/image.webp', 'Горячие асфальтобетонные смеси')
+            +product('images/image.webp', 'Литые асфальтобетонные смеси')
+            +product('images/image.webp', 'Щебёночно-мастичные <br/>асфальтобетонные смеси')
+            +product('images/image.webp', 'Битумное вяжущее')
+            +product('images/image.webp', 'Горячие асфальтобетонные смеси')
+            +product('images/image.webp', 'Литые асфальтобетонные смеси')
+            +product('images/image.webp', 'Щебёночно-мастичные <br/>асфальтобетонные смеси')
+            +product('images/image.webp', 'Битумное вяжущее')

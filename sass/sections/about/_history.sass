@@ -1,0 +1,135 @@
+section.history
+    margin-top: 46px
+    margin-bottom: 80px
+    +screen(m)
+        margin-bottom: 60px
+
+    div.description
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 32px
+        margin-top: 28px
+        margin-bottom: 40px
+        +screen(m)
+            grid-template-columns: 1fr
+            grid-gap: 10px
+            margin-top: 10px
+            margin-bottom: 20px
+
+        strong
+            font-weight: 500
+            font-size: 20px
+            line-height: 140%
+            letter-spacing: 0.01em
+            text-transform: uppercase
+            opacity: 0.7
+            max-width: 662px
+            +screen(m)
+                font-size: 12px
+                line-height: 130%
+
+        span
+            opacity: 0.7
+            line-height: 130%
+            +screen(m)
+                font-size: 12px
+
+    img.preview
+        width: 100%
+        height: 691px
+        object-fit: cover
+        object-position: center center
+        +screen(m)
+            height: 280px
+
+    div.tabs
+        position: relative
+        padding-top: 300px
+        +screen(m)
+            padding-top: unset
+
+    div.tabs_captions
+        position: absolute
+        top: 0
+        left: 746px
+        display: flex
+        align-content: center
+        flex-wrap: wrap
+        gap: 10px 43px
+        height: 300px
+        +screen(xl)
+            left: calc(50% + 16px)
+        +screen(m)
+            position: static
+            height: auto
+            gap: 10px 20px
+            padding: 20px 0
+
+        div.tab_caption
+            position: static
+            cursor: pointer
+            font-weight: 700
+            font-size: 24px
+            line-height: 130%
+            letter-spacing: 0.01em
+            text-transform: uppercase
+            opacity: 0.2
+            +screen(m)
+                font-size: 16px
+            &.opened
+                opacity: 1
+
+    div.tab_content
+        display: none
+        position: relative
+        grid-template-columns: 714px 1fr
+        grid-gap: 32px
+        +screen(xl)
+            grid-template-columns: repeat(2, 1fr)
+        +screen(m)
+            grid-template-columns: 1fr
+            grid-gap: 10px
+
+        div.year
+            position: absolute
+            bottom: 100%
+            left: 0
+            display: grid
+            align-items: center
+            height: 300px
+            font-weight: 700
+            font-size: 154px
+            line-height: 140%
+            letter-spacing: 0.01em
+            text-transform: uppercase
+            vertical-align: middle
+            opacity: 0.7
+            +screen(xl)
+                width: 50%
+                font-size: 120px
+            +screen(m)
+                position: static
+                height: unset
+                font-size: 48px
+                line-height: 130%
+                margin-bottom: 10px
+
+        span
+            opacity: 0.7
+            max-width: 597px
+            line-height: 130%
+            +screen(m)
+                font-size: 12px
+                order: 2
+
+        img
+            width: 100%
+            +screen(m)
+                width: 100%
+                height: 280px
+                object-fit: cover
+                object-position: center center
+                order: 1
+
+        &.opened
+            display: grid

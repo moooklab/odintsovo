@@ -1,0 +1,177 @@
+h1, h2, h3, h4, h5, h6
+    font-family: "Cormorant", serif
+    font-weight: 700
+    letter-spacing: 0.01em
+    text-transform: uppercase
+
+h1
+    font-size: 48px
+    +screen(m)
+        font-size: 24px
+
+h2
+    font-size: 26px
+    line-height: 130%
+    +screen(m)
+        font-size: 18px
+
+    &.underline
+        position: relative
+        padding-bottom: 10px
+        +screen(m)
+            padding-bottom: 5px
+        &::after
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            display: block
+            width: 49px
+            height: 1px
+            background: $red
+
+h3
+    font-size: 16px
+    line-height: 130%
+    +screen(m)
+        font-size: 12px
+
+button, a.button
+    cursor: pointer
+    display: block
+    padding: 16px 24px
+    font-weight: 500
+    font-size: 14px
+    line-height: 130%
+    letter-spacing: 0.01em
+    text-transform: uppercase
+    transition: background .3s
+    text-align: center
+    +screen(m)
+        padding: 12px 24px
+        font-size: 12px
+
+    &.yellow
+        background: $yellow
+        outline: 1px solid $yellow
+        color: $black
+
+        &:hover
+            background: $yellow_hover
+
+    &.border
+        outline: 1px solid $black
+        &:hover
+            outline: 1px solid $yellow
+            background: $yellow
+
+input, textarea
+    border: 1px solid rgba(29, 29, 27, 0.2)
+    padding: 16px 15px
+    width: 100%
+    height: 50px
+    +screen(m)
+        height: 40px
+        font-size: 14px
+        padding: 12px 15px
+
+    &::placeholder
+        font-weight: 400
+        font-size: 12px
+        line-height: 140%
+        letter-spacing: 0.02em
+        text-transform: uppercase
+        color: $black
+        opacity: 0.45
+
+    &:focus
+        border: 1px solid rgba(29, 29, 27, 1)
+
+textarea
+    min-height: 100px
+
+div.breadcrumbs
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: 5px
+    font-weight: 400
+    font-size: 14px
+    line-height: 130%
+    margin-top: 40px
+    margin-bottom: 40px
+    +screen(m)
+        margin-top: 30px
+        margin-bottom: 20px
+        font-size: 12px
+    a
+        opacity: 0.5
+    div.dot
+        display: block
+        width: 2px
+        height: 2px
+        border-radius: 1px
+        background: $yellow
+
+div.swiper-navigation
+    display: grid
+    grid-template-columns: repeat(2, max-content)
+    grid-gap: 10px
+    div.arrow
+        cursor: pointer
+        display: grid
+        align-items: center
+        justify-items: center
+        border: 1px solid rgba(29, 29, 27, 0.5)
+        width: 55px
+        height: 55px
+
+        &.swiper-button-disabled
+            pointer-events: none
+            opacity: 0.3
+
+        &:last-child
+            transform: rotate(180deg)
+
+        &:hover
+            border: 1px solid $yellow
+            svg
+                path
+                    fill: $yellow
+
+div.pagination
+    display: grid
+    justify-items: center
+    grid-gap: 26px
+    margin-top: 40px
+    +screen(m)
+        grid-gap: 20px
+    div.pages
+        display: grid
+        grid-gap: 15px
+        grid-auto-flow: column
+        grid-auto-columns: max-content
+        align-items: center
+        font-weight: 400
+        font-size: 16px
+        line-height: 130%
+        a:hover
+            color: $yellow
+        a.active
+            pointer-events: none
+            color: $yellow
+        a.arrow
+            cursor: pointer
+            display: grid
+            height: 100%
+            align-items: center
+            &:hover
+                svg
+                    path
+                        stroke: $yellow
+    button, a.button
+        +screen(xs)
+            width: 100%
+
+[class*="ymaps-2"][class*="-ground-pane"]
+    filter: grayscale(1)

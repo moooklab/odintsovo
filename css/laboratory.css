@@ -1,0 +1,502 @@
+section.main {
+  margin-bottom: 80px;
+}
+@media (max-width: 960px) {
+  section.main {
+    margin-bottom: 60px;
+  }
+}
+section.main div.about {
+  display: grid;
+  grid-template-columns: 726px 1fr;
+  grid-gap: 50px;
+  margin-top: 32px;
+}
+@media (max-width: 1280px) {
+  section.main div.about {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
+@media (max-width: 960px) {
+  section.main div.about {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 640px) {
+  section.main div.about {
+    grid-template-columns: 1fr;
+  }
+}
+section.main div.about div.text h2 {
+  margin-bottom: 32px;
+  max-width: 408px;
+}
+@media (max-width: 960px) {
+  section.main div.about div.text h2 {
+    margin-bottom: 10px;
+  }
+}
+section.main div.about div.text span {
+  display: block;
+  opacity: 0.7;
+  max-width: 862px;
+}
+@media (max-width: 960px) {
+  section.main div.about div.text span {
+    font-size: 12px;
+    line-height: 120%;
+  }
+}
+section.main div.about div.text button {
+  margin-top: 24px;
+}
+@media (max-width: 960px) {
+  section.main div.about div.text button {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+section.main div.about img {
+  height: 593px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+@media (max-width: 960px) {
+  section.main div.about img {
+    height: 280px;
+  }
+}
+
+section.testing {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  background: #f8f8f8;
+}
+@media (max-width: 960px) {
+  section.testing {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding-bottom: unset;
+  }
+}
+section.testing div.container {
+  display: grid;
+}
+section.testing div.swiper {
+  width: 100%;
+  min-width: 0;
+}
+section.testing div.swiper.captions {
+  margin-bottom: 50px;
+}
+@media (max-width: 1280px) {
+  section.testing div.swiper.captions {
+    overflow: visible;
+  }
+}
+section.testing div.swiper.captions div.swiper-slide {
+  cursor: pointer;
+  position: relative;
+  display: grid;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  position: relative;
+  aspect-ratio: 1/1;
+  padding: 45px 20px;
+}
+@media (max-width: 960px) {
+  section.testing div.swiper.captions div.swiper-slide {
+    padding: 20px 10px;
+  }
+}
+section.testing div.swiper.captions div.swiper-slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  z-index: 1;
+}
+section.testing div.swiper.captions div.swiper-slide::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(29, 29, 27, 0.3);
+  z-index: 2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+section.testing div.swiper.captions div.swiper-slide h3 {
+  text-align: center;
+  position: relative;
+  color: #fff;
+  z-index: 3;
+}
+section.testing div.swiper.captions div.swiper-slide.swiper-slide-thumb-active::after {
+  border: 3px solid #ffcd00;
+}
+section.testing div.swiper.contents div.swiper-slide {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+}
+@media (max-width: 960px) {
+  section.testing div.swiper.contents div.swiper-slide {
+    grid-template-columns: 1fr;
+  }
+}
+section.testing div.swiper.contents div.text {
+  display: grid;
+  max-width: 750px;
+}
+section.testing div.swiper.contents div.text h2 {
+  margin-bottom: 32px;
+}
+@media (max-width: 960px) {
+  section.testing div.swiper.contents div.text h2 {
+    margin-bottom: 10px;
+  }
+}
+section.testing div.swiper.contents div.text span {
+  opacity: 0.7;
+}
+@media (max-width: 960px) {
+  section.testing div.swiper.contents div.text span {
+    line-height: 120%;
+    font-size: 12px;
+  }
+}
+section.testing div.swiper.contents img.preview {
+  width: 100%;
+  height: 533px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+@media (max-width: 960px) {
+  section.testing div.swiper.contents img.preview {
+    display: none;
+  }
+}
+section.testing div.swiper.contents div.docs {
+  display: grid;
+  margin-top: 40px;
+}
+@media (max-width: 960px) {
+  section.testing div.swiper.contents div.docs {
+    margin-top: 10px;
+  }
+}
+section.testing div.swiper.contents div.docs a.doc {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: -webkit-max-content 1fr -webkit-max-content;
+  grid-template-columns: max-content 1fr max-content;
+  grid-gap: 10px;
+  padding: 20px 0;
+}
+section.testing div.swiper.contents div.docs a.doc:not(:last-child) {
+  border-bottom: 1px solid rgba(29, 29, 27, 0.2);
+}
+section.testing div.swiper.contents div.docs a.doc span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+}
+
+section.documents {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+@media (max-width: 960px) {
+  section.documents {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+section.documents div.container {
+  display: grid;
+  grid-template-columns: 1fr -webkit-max-content;
+  grid-template-columns: 1fr max-content;
+  grid-gap: 30px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  margin-bottom: 30px;
+}
+@media (max-width: 960px) {
+  section.documents div.swiper-navigation {
+    display: none;
+  }
+}
+section.documents div.slider {
+  display: grid;
+}
+section.documents div.slider div.swiper {
+  width: 100%;
+  min-width: 0;
+}
+@media (max-width: 640px) {
+  section.documents div.slider div.swiper {
+    overflow: visible;
+  }
+}
+section.documents div.slider div.swiper img {
+  width: 100%;
+  -webkit-filter: grayscale(1) brightness(1.25);
+          filter: grayscale(1) brightness(1.25);
+}
+section.documents div.slider div.swiper a {
+  position: relative;
+}
+section.documents div.slider div.swiper a::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 42px;
+  height: 40px;
+  background-image: url(../images/zoom.svg);
+  background-size: contain;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+section.documents div.slider div.swiper a:hover::after {
+  display: block;
+}
+section.documents div.slider div.swiper a:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+section.callback {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+@media (max-width: 960px) {
+  section.callback {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+section.callback div.container {
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-template-areas: "Title Title" "Text Form";
+  grid-template-columns: 426px 1fr;
+  grid-gap: 32px 20px;
+}
+@media (max-width: 1280px) {
+  section.callback div.container {
+    grid-template-columns: 320px 1fr;
+  }
+}
+@media (max-width: 960px) {
+  section.callback div.container {
+    grid-template-areas: "Title" "Text" "Form";
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
+section.callback h2 {
+  grid-area: Title;
+}
+section.callback div.text {
+  grid-area: Text;
+  display: grid;
+  grid-gap: 66px;
+}
+@media (max-width: 960px) {
+  section.callback div.text {
+    grid-gap: 18px;
+  }
+}
+section.callback div.text p {
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 0.7;
+}
+@media (max-width: 960px) {
+  section.callback div.text p {
+    font-size: 12px;
+    line-height: 120%;
+  }
+}
+section.callback div.text div.phone {
+  display: grid;
+  grid-gap: 5px;
+}
+@media (max-width: 960px) {
+  section.callback div.text div.phone {
+    grid-gap: 4px;
+  }
+}
+section.callback div.text div.phone span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+section.callback div.text div.phone a.tel {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 140%;
+}
+@media (max-width: 960px) {
+  section.callback div.text div.phone a.tel {
+    font-size: 20px;
+  }
+}
+section.callback div.text div.phone a.mail {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+@media (max-width: 960px) {
+  section.callback div.text div.phone a.mail {
+    font-size: 12px;
+  }
+}
+section.callback div.text div.phone a.mail:hover {
+  text-decoration: underline;
+}
+section.callback form {
+  grid-area: Form;
+  display: grid;
+  grid-gap: 10px;
+  max-width: 886px;
+}
+section.callback form label.upload {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: -webkit-max-content auto;
+  grid-template-columns: max-content auto;
+  justify-self: start;
+  grid-gap: 15px;
+  min-height: 49px;
+}
+@media (max-width: 960px) {
+  section.callback form label.upload {
+    grid-gap: 5px;
+  }
+}
+section.callback form label.upload input {
+  display: none;
+}
+@media (max-width: 960px) {
+  section.callback form label.upload img.upload {
+    width: 29px;
+    height: 29px;
+  }
+}
+section.callback form label.upload img.cross {
+  cursor: pointer;
+  display: none;
+}
+section.callback form label.upload span {
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #1d1d1b;
+}
+section.callback form label.upload span.name {
+  display: none;
+}
+section.callback form label.upload.added {
+  justify-items: start;
+  grid-template-columns: minmax(-webkit-min-content, -webkit-max-content) -webkit-max-content;
+  grid-template-columns: minmax(min-content, max-content) max-content;
+}
+section.callback form label.upload.added img.upload {
+  display: none;
+}
+section.callback form label.upload.added img.cross {
+  display: block;
+}
+section.callback form label.upload.added span.default {
+  display: none;
+}
+section.callback form label.upload.added span.name {
+  display: inline;
+}
+section.callback form div.submit {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: -webkit-max-content 1fr;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 19px;
+  margin-top: 23px;
+}
+@media (max-width: 640px) {
+  section.callback form div.submit {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin-top: 10px;
+  }
+}
+section.callback form div.submit div {
+  display: block;
+  max-width: 388px;
+  line-height: 0;
+}
+@media (max-width: 640px) {
+  section.callback form div.submit div {
+    max-width: unset;
+  }
+}
+section.callback form div.submit span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  opacity: 0.5;
+}
+@media (max-width: 960px) {
+  section.callback form div.submit span {
+    font-size: 11px;
+  }
+}
+section.callback form div.submit a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  opacity: 0.8;
+}
+@media (max-width: 640px) {
+  section.callback form div.submit a {
+    font-size: 11px;
+  }
+}
+section.callback form div.submit a:hover {
+  text-decoration: none;
+}/*# sourceMappingURL=laboratory.css.map */

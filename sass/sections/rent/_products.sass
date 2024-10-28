@@ -1,0 +1,39 @@
+section.products
+    background: #f8f8f8
+    margin-top: 80px
+    margin-bottom: 80px
+    padding-top: 50px
+    padding-bottom: 50px
+    +screen(m)
+        margin-top: 60px
+        margin-bottom: 60px
+        padding-top: 20px
+        padding-bottom: 20px
+
+    div.list
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 30px 20px
+        margin-top: 30px
+        +screen(m)
+            margin-top: 20px
+            grid-template-columns: repeat(3, 1fr)
+            grid-gap: 20px
+        +screen(s)
+            grid-template-columns: repeat(2, 1fr)
+        +screen(xs)
+            grid-template-columns: 1fr
+        div.product
+            display: grid
+            grid-gap: 15px
+            text-align: center
+            +screen(m)
+                grid-gap: 10px
+                text-align: left
+
+            img
+                width: 100%
+                aspect-ratio: 1 / 1
+                object-fit: cover
+                object-position: center center
+            

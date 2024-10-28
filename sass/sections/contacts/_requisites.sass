@@ -1,0 +1,39 @@
+section.requisite
+    margin-top: 80px
+    margin-bottom: 80px
+    +screen(m)
+        margin-top: 60px
+        margin-bottom: 60px
+
+    div.container
+        display: grid
+        grid-gap: 24px
+        +screen(m)
+            grid-gap: 10px
+
+    div.list
+        display: grid
+        align-items: start
+        grid-auto-flow: column
+        grid-auto-columns: minmax(1fr, max-content)
+        justify-content: space-between
+        grid-gap: 20px
+        +screen(l)
+            grid-auto-flow: unset
+            grid-auto-columns: unset
+            grid-template-columns: repeat(3, 1fr)
+        +screen(m)
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 12px
+        +screen(s)
+            grid-template-columns: 1fr
+            
+        div.item
+            display: grid
+            grid-gap: 10px
+            +screen(m)
+                font-size: 12px
+                line-height: 120%
+                grid-gap: 6px
+            span.name
+                opacity: 0.7

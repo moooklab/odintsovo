@@ -1,0 +1,113 @@
+section.clients
+    margin-top: 80px
+    margin-bottom: 80px
+    +screen(m)
+        margin-top: 60px
+        margin-bottom: 60px
+
+    div.container
+        display: grid
+        grid-template-columns: 1fr max-content
+        grid-gap: 30px
+        align-items: end
+        margin-bottom: 30px
+
+    div.text
+        display: grid
+        grid-gap: 32px
+        max-width: 489px
+        +screen(m)
+            grid-gap: 10px
+        p
+            line-height: 130%
+            opacity: 0.7
+            +screen(m)
+                font-size: 12px
+                line-height: 120%
+
+    div.swiper-navigation
+        +screen(m)
+            display: none
+
+    div.slider
+        grid-column: full
+        background: #f8f8f8
+        padding-left: 30px
+        padding-right: 30px
+        +screen(m)
+            padding-left: 20px
+            padding-right: 20px
+
+        div.swiper
+            width: 100%
+            min-width: 0
+            overflow: visible
+            max-width: 1770px
+            height: 240px
+            +screen(m)
+                height: 170px
+            +screen(s)
+                height: 110px
+
+            div.swiper-slide
+                display: grid
+                align-items: center
+                justify-items: center
+                border-right: 1px solid rgba(29, 29, 27, 0.2)
+                &:first-child
+                    border-left: 1px solid rgba(29, 29, 27, 0.2)
+                
+
+                +screen(s)
+                    &.swiper-slide-active
+                        &::after
+                            content: ''
+                            position: absolute
+                            bottom: 0
+                            left: 50%
+                            display: block
+                            width: 50%
+                            height: 1px
+                            background: $yellow
+                            transform: translateX(-50%)
+                            z-index: 10
+
+                        img
+                            filter: grayscale(0)
+
+                +hover
+                    &::after
+                        content: ''
+                        position: absolute
+                        bottom: 0
+                        left: 50%
+                        display: block
+                        width: 50%
+                        height: 2px
+                        background: $yellow
+                        transform: translateX(-50%)
+                        z-index: 10
+                    img
+                        filter: grayscale(0)
+
+
+            img
+                width: 100%
+                height: 100%
+                max-width: 240px
+                max-height: 120px
+                object-fit: contain
+                object-position: center center
+                filter: grayscale(1)
+                +screen(m)
+                    max-width: 180px
+                    max-height: 90px
+                +screen(s)
+                    max-width: 120px
+                    max-height: 60px
+
+    
+
+
+
+

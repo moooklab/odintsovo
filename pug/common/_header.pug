@@ -1,0 +1,55 @@
+header
+    div.container
+
+        div(onclick="headerMenu(this)").mobile_menu
+            div.menu_icon
+                include ../../images/mobile_menu.svg
+            div.cross_icon
+                include ../../images/cross.svg
+
+        a(href="index.html").logotype
+            include ../../images/logotype.svg
+
+        menu
+            li: a(href="about.html") О компании
+            li: a(href="catalog.html") Продукция
+            li: a(href="delivery.html") Доставка
+            li: a(href="laboratory.html") Лаборатория
+            li: a(href="objects.html") Объекты
+            li: a(href="contacts.html") Контакты
+
+        div.contact
+
+            div.price
+                img(src="images/pricelist.svg", alt="").black
+                img(src="images/pricelist_white.svg", alt="").white
+                span Прайс-лист
+
+            a(href="tel:+7 812 777-89-84").phone
+                include ../../images/phone.svg
+                span +7 812 777-89-84
+
+            button(data-modal-target="proposal").yellow
+                span Оставить заявку
+
+section.menu
+    div.mobile_wrap
+        menu
+            li: a(href="about.html") О компании
+            li: a(href="catalog.html") Продукция
+            li: a(href="delivery.html") Доставка
+            li: a(href="laboratory.html") Лаборатория
+            li: a(href="objects.html") Объекты
+            li: a(href="contacts.html") Контакты
+
+        a(href="tel:+7 812 777-89-84").phone
+            include ../../images/phone.svg
+            span +7 812 777-89-84
+
+        button(data-modal-target="proposal").yellow
+            span Оставить заявку
+
+        div.price
+            img(src="images/pricelist.svg", alt="")
+            span Прайс-лист
+

@@ -1,0 +1,355 @@
+section.main div.container div.links {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  margin-bottom: 80px;
+}
+@media (max-width: 960px) {
+  section.main div.container div.links {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 640px) {
+  section.main div.container div.links {
+    grid-auto-flow: row;
+    grid-gap: 10px;
+  }
+}
+section.main div.container div.links a {
+  display: block;
+  padding: 28px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid rgba(29, 29, 27, 0.2);
+}
+@media (max-width: 960px) {
+  section.main div.container div.links a {
+    font-size: 12px;
+    padding: 12px;
+  }
+}
+section.main div.container div.links a.opened {
+  pointer-events: none;
+  background: #1d1d1b;
+  color: #fff;
+}
+section.main div.container div.links a:hover {
+  background: #f8f8f8;
+}
+section.main div.container div.description {
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  grid-gap: 32px;
+}
+@media (max-width: 960px) {
+  section.main div.container div.description {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+}
+section.main div.container div.description div.text {
+  display: grid;
+  grid-gap: 32px;
+  max-width: 777px;
+}
+@media (max-width: 960px) {
+  section.main div.container div.description div.text {
+    grid-gap: 20px;
+  }
+}
+section.main div.container div.description div.text span {
+  opacity: 0.7;
+}
+@media (max-width: 960px) {
+  section.main div.container div.description div.text span {
+    font-size: 12px;
+    line-height: 120%;
+  }
+}
+section.main div.container div.description div.text div.buttons {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
+  grid-gap: 10px;
+}
+@media (max-width: 640px) {
+  section.main div.container div.description div.text div.buttons {
+    grid-auto-flow: row;
+    grid-auto-columns: 1fr;
+  }
+}
+
+section.products {
+  background: #f8f8f8;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media (max-width: 960px) {
+  section.products {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+section.products div.list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px 20px;
+  margin-top: 30px;
+}
+@media (max-width: 960px) {
+  section.products div.list {
+    margin-top: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+}
+@media (max-width: 640px) {
+  section.products div.list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  section.products div.list {
+    grid-template-columns: 1fr;
+  }
+}
+section.products div.list div.product {
+  display: grid;
+  grid-gap: 15px;
+  text-align: center;
+}
+@media (max-width: 960px) {
+  section.products div.list div.product {
+    grid-gap: 10px;
+    text-align: left;
+  }
+}
+section.products div.list div.product img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+section.callback {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+@media (max-width: 960px) {
+  section.callback {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+section.callback div.container {
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-template-areas: "Title Title" "Text Form";
+  grid-template-columns: 426px 1fr;
+  grid-gap: 32px 20px;
+}
+@media (max-width: 1280px) {
+  section.callback div.container {
+    grid-template-columns: 320px 1fr;
+  }
+}
+@media (max-width: 960px) {
+  section.callback div.container {
+    grid-template-areas: "Title" "Text" "Form";
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
+section.callback h2 {
+  grid-area: Title;
+}
+section.callback div.text {
+  grid-area: Text;
+  display: grid;
+  grid-gap: 66px;
+}
+@media (max-width: 960px) {
+  section.callback div.text {
+    grid-gap: 18px;
+  }
+}
+section.callback div.text p {
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 0.7;
+}
+@media (max-width: 960px) {
+  section.callback div.text p {
+    font-size: 12px;
+    line-height: 120%;
+  }
+}
+section.callback div.text div.phone {
+  display: grid;
+  grid-gap: 5px;
+}
+@media (max-width: 960px) {
+  section.callback div.text div.phone {
+    grid-gap: 4px;
+  }
+}
+section.callback div.text div.phone span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+section.callback div.text div.phone a.tel {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 140%;
+}
+@media (max-width: 960px) {
+  section.callback div.text div.phone a.tel {
+    font-size: 20px;
+  }
+}
+section.callback div.text div.phone a.mail {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+@media (max-width: 960px) {
+  section.callback div.text div.phone a.mail {
+    font-size: 12px;
+  }
+}
+section.callback div.text div.phone a.mail:hover {
+  text-decoration: underline;
+}
+section.callback form {
+  grid-area: Form;
+  display: grid;
+  grid-gap: 10px;
+  max-width: 886px;
+}
+section.callback form label.upload {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: -webkit-max-content auto;
+  grid-template-columns: max-content auto;
+  justify-self: start;
+  grid-gap: 15px;
+  min-height: 49px;
+}
+@media (max-width: 960px) {
+  section.callback form label.upload {
+    grid-gap: 5px;
+  }
+}
+section.callback form label.upload input {
+  display: none;
+}
+@media (max-width: 960px) {
+  section.callback form label.upload img.upload {
+    width: 29px;
+    height: 29px;
+  }
+}
+section.callback form label.upload img.cross {
+  cursor: pointer;
+  display: none;
+}
+section.callback form label.upload span {
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #1d1d1b;
+}
+section.callback form label.upload span.name {
+  display: none;
+}
+section.callback form label.upload.added {
+  justify-items: start;
+  grid-template-columns: minmax(-webkit-min-content, -webkit-max-content) -webkit-max-content;
+  grid-template-columns: minmax(min-content, max-content) max-content;
+}
+section.callback form label.upload.added img.upload {
+  display: none;
+}
+section.callback form label.upload.added img.cross {
+  display: block;
+}
+section.callback form label.upload.added span.default {
+  display: none;
+}
+section.callback form label.upload.added span.name {
+  display: inline;
+}
+section.callback form div.submit {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: -webkit-max-content 1fr;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 19px;
+  margin-top: 23px;
+}
+@media (max-width: 640px) {
+  section.callback form div.submit {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin-top: 10px;
+  }
+}
+section.callback form div.submit div {
+  display: block;
+  max-width: 388px;
+  line-height: 0;
+}
+@media (max-width: 640px) {
+  section.callback form div.submit div {
+    max-width: unset;
+  }
+}
+section.callback form div.submit span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  opacity: 0.5;
+}
+@media (max-width: 960px) {
+  section.callback form div.submit span {
+    font-size: 11px;
+  }
+}
+section.callback form div.submit a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  opacity: 0.8;
+}
+@media (max-width: 640px) {
+  section.callback form div.submit a {
+    font-size: 11px;
+  }
+}
+section.callback form div.submit a:hover {
+  text-decoration: none;
+}/*# sourceMappingURL=rent.css.map */

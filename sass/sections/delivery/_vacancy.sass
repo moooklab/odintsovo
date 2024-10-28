@@ -1,0 +1,46 @@
+section.vacancy
+    margin-top: 80px
+    margin-bottom: 80px
+    +screen(m)
+        margin-top: 60px
+        margin-bottom: 60px
+
+    div.job
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 32px
+        +screen(s)
+            grid-template-columns: 1fr
+            grid-gap: 10px
+
+        div.text
+            +screen(s)
+                order: 2
+            h2
+                margin-bottom: 32px
+                +screen(m)
+                    margin-bottom: 10px
+
+            span
+                display: block
+                opacity: 0.7
+                max-width: 778px
+                +screen(m)
+                    font-size: 12px
+                    line-height: 120%
+
+            button
+                margin-top: 24px
+                +screen(m)
+                    margin-top: 20px
+                    width: 100%
+
+        img
+            height: 366px
+            width: 100%
+            object-fit: cover
+            object-position: center center
+            +screen(m)
+                height: 280px
+            +screen(s)
+                order: 1

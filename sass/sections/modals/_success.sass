@@ -1,0 +1,50 @@
+dialog[data-modal-name=success]
+    width: 100%
+    height: 100%
+    max-width: unset
+    max-height: unset
+    background: transparent
+    display: grid
+    align-items: center
+    justify-items: center
+
+    div.container
+        position: relative
+        background: white
+        padding: 117px 40px
+        width: 100%
+        max-width: 875px
+        display: grid
+        justify-items: center
+        align-self: center
+        +screen(m)
+            display: grid
+            align-content: center
+            height: 100%
+            width: 100%
+            max-width: unset
+            padding: 30px 20px
+
+    img
+        +screen(m)
+            width: 125px
+
+    h2
+        margin-top: 32px
+        margin-bottom: 16px
+        +screen(m)
+            margin-top: 10px
+            margin-bottom: 20px
+
+    span
+        opacity: 0.8
+        +screen(m)
+            font-size: 12px
+
+    a.button
+        margin-top: 32px
+        +screen(m)
+            margin-top: 20px
+        +screen(s)
+            width: 100%
+        

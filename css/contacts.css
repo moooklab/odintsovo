@@ -1,0 +1,533 @@
+section.contacts {
+  margin-bottom: 80px;
+}
+@media (max-width: 960px) {
+  section.contacts {
+    margin-bottom: 60px;
+  }
+}
+section.contacts h1 {
+  margin-bottom: 24px;
+}
+section.contacts div.departments {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+@media (max-width: 1280px) {
+  section.contacts div.departments {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  section.contacts div.departments {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  section.contacts div.departments {
+    grid-template-columns: 1fr;
+  }
+}
+section.contacts div.departments div.department, section.contacts div.departments div.office {
+  display: grid;
+  grid-template-rows: 1fr -webkit-max-content;
+  grid-template-rows: 1fr max-content;
+  grid-gap: 20px;
+  background: #f8f8f8;
+  padding: 30px;
+  min-height: 331px;
+}
+@media (max-width: 960px) {
+  section.contacts div.departments div.department, section.contacts div.departments div.office {
+    padding: 15px;
+    min-height: 217px;
+  }
+}
+section.contacts div.departments div.department div.text, section.contacts div.departments div.office div.text {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: -webkit-max-content;
+  grid-auto-rows: max-content;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-gap: 16px;
+}
+@media (max-width: 960px) {
+  section.contacts div.departments div.department div.text, section.contacts div.departments div.office div.text {
+    grid-gap: 10px;
+  }
+}
+section.contacts div.departments div.department div.text span, section.contacts div.departments div.office div.text span {
+  opacity: 0.7;
+}
+@media (max-width: 960px) {
+  section.contacts div.departments div.department div.text span, section.contacts div.departments div.office div.text span {
+    font-size: 12px;
+    line-height: 120%;
+  }
+}
+section.contacts div.departments div.department div.contacts, section.contacts div.departments div.office div.contacts {
+  display: grid;
+  grid-gap: 10px;
+}
+section.contacts div.departments div.department div.contacts div.icon, section.contacts div.departments div.office div.contacts div.icon {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  border: 1px solid #1d1d1b;
+  margin-top: -3px;
+}
+@media (max-width: 960px) {
+  section.contacts div.departments div.department div.contacts div.icon, section.contacts div.departments div.office div.contacts div.icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+section.contacts div.departments div.department div.contacts div.adress, section.contacts div.departments div.department div.contacts div.phones, section.contacts div.departments div.department div.contacts div.email, section.contacts div.departments div.office div.contacts div.adress, section.contacts div.departments div.office div.contacts div.phones, section.contacts div.departments div.office div.contacts div.email {
+  display: grid;
+  grid-template-columns: -webkit-max-content 1fr;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 10px;
+}
+section.contacts div.departments div.department div.contacts div.adress img, section.contacts div.departments div.department div.contacts div.adress svg, section.contacts div.departments div.department div.contacts div.phones img, section.contacts div.departments div.department div.contacts div.phones svg, section.contacts div.departments div.department div.contacts div.email img, section.contacts div.departments div.department div.contacts div.email svg, section.contacts div.departments div.office div.contacts div.adress img, section.contacts div.departments div.office div.contacts div.adress svg, section.contacts div.departments div.office div.contacts div.phones img, section.contacts div.departments div.office div.contacts div.phones svg, section.contacts div.departments div.office div.contacts div.email img, section.contacts div.departments div.office div.contacts div.email svg {
+  width: 16px;
+  height: 16px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center center;
+     object-position: center center;
+}
+@media (max-width: 960px) {
+  section.contacts div.departments div.department div.contacts div.adress img, section.contacts div.departments div.department div.contacts div.adress svg, section.contacts div.departments div.department div.contacts div.phones img, section.contacts div.departments div.department div.contacts div.phones svg, section.contacts div.departments div.department div.contacts div.email img, section.contacts div.departments div.department div.contacts div.email svg, section.contacts div.departments div.office div.contacts div.adress img, section.contacts div.departments div.office div.contacts div.adress svg, section.contacts div.departments div.office div.contacts div.phones img, section.contacts div.departments div.office div.contacts div.phones svg, section.contacts div.departments div.office div.contacts div.email img, section.contacts div.departments div.office div.contacts div.email svg {
+    width: 11px;
+    height: 11px;
+  }
+}
+section.contacts div.departments div.department div.contacts div.adress div.list, section.contacts div.departments div.department div.contacts div.phones div.list, section.contacts div.departments div.department div.contacts div.email div.list, section.contacts div.departments div.office div.contacts div.adress div.list, section.contacts div.departments div.office div.contacts div.phones div.list, section.contacts div.departments div.office div.contacts div.email div.list {
+  display: grid;
+  grid-gap: 5px;
+}
+section.contacts div.departments div.department div.contacts div.adress a, section.contacts div.departments div.department div.contacts div.adress span, section.contacts div.departments div.department div.contacts div.phones a, section.contacts div.departments div.department div.contacts div.phones span, section.contacts div.departments div.department div.contacts div.email a, section.contacts div.departments div.department div.contacts div.email span, section.contacts div.departments div.office div.contacts div.adress a, section.contacts div.departments div.office div.contacts div.adress span, section.contacts div.departments div.office div.contacts div.phones a, section.contacts div.departments div.office div.contacts div.phones span, section.contacts div.departments div.office div.contacts div.email a, section.contacts div.departments div.office div.contacts div.email span {
+  opacity: 0.7;
+}
+@media (max-width: 960px) {
+  section.contacts div.departments div.department div.contacts div.adress a, section.contacts div.departments div.department div.contacts div.adress span, section.contacts div.departments div.department div.contacts div.phones a, section.contacts div.departments div.department div.contacts div.phones span, section.contacts div.departments div.department div.contacts div.email a, section.contacts div.departments div.department div.contacts div.email span, section.contacts div.departments div.office div.contacts div.adress a, section.contacts div.departments div.office div.contacts div.adress span, section.contacts div.departments div.office div.contacts div.phones a, section.contacts div.departments div.office div.contacts div.phones span, section.contacts div.departments div.office div.contacts div.email a, section.contacts div.departments div.office div.contacts div.email span {
+    font-size: 12px;
+    line-height: 120%;
+  }
+}
+section.contacts div.departments div.department div.contacts div.email a, section.contacts div.departments div.office div.contacts div.email a {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-bottom: 1px solid #1d1d1b;
+}
+section.contacts div.departments div.department div.contacts div.email a:hover, section.contacts div.departments div.office div.contacts div.email a:hover {
+  border-bottom: unset;
+}
+section.contacts div.departments div.office {
+  position: relative;
+  background: #1d1d1b;
+  color: #fff;
+}
+section.contacts div.departments div.office img.preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  z-index: 0;
+  opacity: 0.3;
+}
+section.contacts div.departments div.office h3 {
+  position: relative;
+  z-index: 1;
+}
+section.contacts div.departments div.office div.contacts {
+  position: relative;
+  z-index: 1;
+}
+section.contacts div.departments div.office div.icon {
+  border: 0.5px solid #fff !important;
+}
+section.contacts div.departments div.office div.adress svg path, section.contacts div.departments div.office div.email svg path {
+  fill: white;
+}
+section.contacts div.departments div.office div.phones svg {
+  width: 16px;
+}
+section.contacts div.departments div.office div.phones svg path {
+  stroke: white;
+  stroke-width: 1px;
+}
+section.contacts div#map1 {
+  margin-top: 40px;
+  width: 100%;
+  height: 486px;
+}
+@media (max-width: 960px) {
+  section.contacts div#map1 {
+    margin-top: 30px;
+    height: 349px;
+  }
+}
+section.contacts div#map1 > *, section.contacts div#map1 > * > * {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+section.requisite {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+@media (max-width: 960px) {
+  section.requisite {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+section.requisite div.container {
+  display: grid;
+  grid-gap: 24px;
+}
+@media (max-width: 960px) {
+  section.requisite div.container {
+    grid-gap: 10px;
+  }
+}
+section.requisite div.list {
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(1fr, -webkit-max-content);
+  grid-auto-columns: minmax(1fr, max-content);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  grid-gap: 20px;
+}
+@media (max-width: 1280px) {
+  section.requisite div.list {
+    grid-auto-flow: unset;
+    grid-auto-columns: unset;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 960px) {
+  section.requisite div.list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 12px;
+  }
+}
+@media (max-width: 640px) {
+  section.requisite div.list {
+    grid-template-columns: 1fr;
+  }
+}
+section.requisite div.list div.item {
+  display: grid;
+  grid-gap: 10px;
+}
+@media (max-width: 960px) {
+  section.requisite div.list div.item {
+    font-size: 12px;
+    line-height: 120%;
+    grid-gap: 6px;
+  }
+}
+section.requisite div.list div.item span.name {
+  opacity: 0.7;
+}
+
+section.production div#map2 {
+  margin-top: 32px;
+  width: 100%;
+  height: 486px;
+}
+@media (max-width: 960px) {
+  section.production div#map2 {
+    margin-top: 10px;
+    height: 349px;
+  }
+}
+section.production div#map2 > *, section.production div#map2 > * > * {
+  width: 100% !important;
+  height: 100% !important;
+}
+section.production div.list {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px;
+}
+@media (max-width: 640px) {
+  section.production div.list {
+    margin-top: 20px;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+}
+section.production div.list div.item img {
+  width: 100%;
+  height: 386px;
+  margin-bottom: 30px;
+}
+@media (max-width: 960px) {
+  section.production div.list div.item img {
+    height: 280px;
+    margin-bottom: 10px;
+  }
+}
+section.production div.list div.item h2 {
+  margin-bottom: 32px;
+}
+@media (max-width: 960px) {
+  section.production div.list div.item h2 {
+    margin-bottom: 10px;
+  }
+}
+section.production div.list div.item span {
+  display: block;
+  opacity: 0.7;
+  max-width: 530px;
+}
+@media (max-width: 960px) {
+  section.production div.list div.item span {
+    font-size: 12px;
+    line-height: 120%;
+  }
+}
+section.production div.list div.item button {
+  margin-top: 24px;
+}
+@media (max-width: 960px) {
+  section.production div.list div.item button {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+section.callback {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+@media (max-width: 960px) {
+  section.callback {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+section.callback div.container {
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-template-areas: "Title Title" "Text Form";
+  grid-template-columns: 426px 1fr;
+  grid-gap: 32px 20px;
+}
+@media (max-width: 1280px) {
+  section.callback div.container {
+    grid-template-columns: 320px 1fr;
+  }
+}
+@media (max-width: 960px) {
+  section.callback div.container {
+    grid-template-areas: "Title" "Text" "Form";
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
+section.callback h2 {
+  grid-area: Title;
+}
+section.callback div.text {
+  grid-area: Text;
+  display: grid;
+  grid-gap: 66px;
+}
+@media (max-width: 960px) {
+  section.callback div.text {
+    grid-gap: 18px;
+  }
+}
+section.callback div.text p {
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 0.7;
+}
+@media (max-width: 960px) {
+  section.callback div.text p {
+    font-size: 12px;
+    line-height: 120%;
+  }
+}
+section.callback div.text div.phone {
+  display: grid;
+  grid-gap: 5px;
+}
+@media (max-width: 960px) {
+  section.callback div.text div.phone {
+    grid-gap: 4px;
+  }
+}
+section.callback div.text div.phone span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+section.callback div.text div.phone a.tel {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 140%;
+}
+@media (max-width: 960px) {
+  section.callback div.text div.phone a.tel {
+    font-size: 20px;
+  }
+}
+section.callback div.text div.phone a.mail {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+@media (max-width: 960px) {
+  section.callback div.text div.phone a.mail {
+    font-size: 12px;
+  }
+}
+section.callback div.text div.phone a.mail:hover {
+  text-decoration: underline;
+}
+section.callback form {
+  grid-area: Form;
+  display: grid;
+  grid-gap: 10px;
+  max-width: 886px;
+}
+section.callback form label.upload {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: -webkit-max-content auto;
+  grid-template-columns: max-content auto;
+  justify-self: start;
+  grid-gap: 15px;
+  min-height: 49px;
+}
+@media (max-width: 960px) {
+  section.callback form label.upload {
+    grid-gap: 5px;
+  }
+}
+section.callback form label.upload input {
+  display: none;
+}
+@media (max-width: 960px) {
+  section.callback form label.upload img.upload {
+    width: 29px;
+    height: 29px;
+  }
+}
+section.callback form label.upload img.cross {
+  cursor: pointer;
+  display: none;
+}
+section.callback form label.upload span {
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #1d1d1b;
+}
+section.callback form label.upload span.name {
+  display: none;
+}
+section.callback form label.upload.added {
+  justify-items: start;
+  grid-template-columns: minmax(-webkit-min-content, -webkit-max-content) -webkit-max-content;
+  grid-template-columns: minmax(min-content, max-content) max-content;
+}
+section.callback form label.upload.added img.upload {
+  display: none;
+}
+section.callback form label.upload.added img.cross {
+  display: block;
+}
+section.callback form label.upload.added span.default {
+  display: none;
+}
+section.callback form label.upload.added span.name {
+  display: inline;
+}
+section.callback form div.submit {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: -webkit-max-content 1fr;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 19px;
+  margin-top: 23px;
+}
+@media (max-width: 640px) {
+  section.callback form div.submit {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin-top: 10px;
+  }
+}
+section.callback form div.submit div {
+  display: block;
+  max-width: 388px;
+  line-height: 0;
+}
+@media (max-width: 640px) {
+  section.callback form div.submit div {
+    max-width: unset;
+  }
+}
+section.callback form div.submit span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  opacity: 0.5;
+}
+@media (max-width: 960px) {
+  section.callback form div.submit span {
+    font-size: 11px;
+  }
+}
+section.callback form div.submit a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  opacity: 0.8;
+}
+@media (max-width: 640px) {
+  section.callback form div.submit a {
+    font-size: 11px;
+  }
+}
+section.callback form div.submit a:hover {
+  text-decoration: none;
+}/*# sourceMappingURL=contacts.css.map */

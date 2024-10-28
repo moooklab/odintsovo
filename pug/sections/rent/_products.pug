@@ -1,0 +1,29 @@
+mixin product(image, title)
+    div.product
+        img(src=image, alt="")
+        h3= title
+
+section.products
+    div.container
+
+        h2.underline Наш парк спецтехники
+
+        div.list
+            +product('images/image.webp', 'Асфальтоукладчики  JCB JS160W')
+            +product('images/image.webp', 'Автогрейдеры')
+            +product('images/image.webp', 'Бульдозеры')
+            +product('images/image.webp', 'Экскаватор на гусеничном ходу Volvo EC 250 DL')
+            +product('images/image.webp', 'Дорожные катки')
+            +product('images/image.webp', 'Экскаваторы-погрузчики')
+            +product('images/image.webp', 'Эвакуаторы')
+            +product('images/image.webp', 'Фронтальные погрузчики')
+            +product('images/image.webp', 'Грунтовые катки')
+            +product('images/image.webp', 'Гусеничные экскаваторы')
+            +product('images/image.webp', 'Малотоннажные грузовики')
+            +product('images/image.webp', 'Мини-погрузчики')
+            +product('images/image.webp', 'Поливомоечные машины')
+            +product('images/image.webp', 'Самосвалы')
+            +product('images/image.webp', 'Трактора')
+            +product('images/image.webp', 'Тралы')
+      
+        include ../_pagination.pug

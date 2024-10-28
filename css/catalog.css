@@ -1,0 +1,599 @@
+section.products h1 {
+  margin-bottom: 24px;
+}
+@media (max-width: 960px) {
+  section.products h1 {
+    margin-bottom: 20px;
+  }
+}
+section.products div.tags {
+  margin-bottom: 32px;
+}
+@media (max-width: 960px) {
+  section.products div.tags {
+    width: 100vw;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-x: scroll;
+  }
+  section.products div.tags::-webkit-scrollbar {
+    pointer-events: none;
+    display: none;
+    opacity: 0;
+  }
+}
+section.products div.tags div.overflow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+@media (max-width: 960px) {
+  section.products div.tags div.overflow {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+}
+section.products div.tags div.tag {
+  cursor: pointer;
+  border: 1px solid #1d1d1b;
+  padding: 16px 26px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+@media (max-width: 960px) {
+  section.products div.tags div.tag {
+    font-size: 12px;
+    padding: 12px 26px;
+    white-space: nowrap;
+  }
+}
+section.products div.tags div.tag.opened {
+  background: #1d1d1b;
+  color: #fff;
+}
+section.products div.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px 20px;
+}
+@media (max-width: 640px) {
+  section.products div.products {
+    grid-template-columns: 1fr;
+  }
+}
+section.products div.product {
+  position: relative;
+  padding: 30px;
+  border: 2px solid #f3f3f3;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fff;
+}
+@media (max-width: 960px) {
+  section.products div.product {
+    padding: 15px;
+  }
+}
+section.products div.product div.main {
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-template-areas: "Image Title Order" "Image Price Order";
+  grid-template-columns: -webkit-max-content 1fr -webkit-max-content;
+  grid-template-columns: max-content 1fr max-content;
+  grid-gap: 18px 26px;
+}
+@media (max-width: 1600px) {
+  section.products div.product div.main {
+    grid-template-areas: "Image Title" "Image Price" "Image Order";
+    grid-template-columns: -webkit-max-content 1fr;
+    grid-template-columns: max-content 1fr;
+  }
+}
+@media (max-width: 960px) {
+  section.products div.product div.main {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    grid-template-areas: "Image Price" "Title Title" "Order Order";
+    gap: 10px;
+  }
+}
+section.products div.product div.main img.image {
+  grid-area: Image;
+  aspect-ratio: 1/1;
+  width: 114px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+@media (max-width: 1600px) {
+  section.products div.product div.main img.image {
+    width: 90px;
+  }
+}
+@media (max-width: 960px) {
+  section.products div.product div.main img.image {
+    width: 66px;
+  }
+}
+section.products div.product div.main h3 {
+  grid-area: Title;
+}
+section.products div.product div.main div.price {
+  grid-area: Price;
+  display: grid;
+}
+section.products div.product div.main div.price strong {
+  font-family: "Cormorant", serif;
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+@media (max-width: 960px) {
+  section.products div.product div.main div.price strong {
+    font-size: 22px;
+  }
+}
+section.products div.product div.main div.price span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  opacity: 0.5;
+}
+section.products div.product div.main div.order {
+  grid-area: Order;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
+  grid-gap: 11px;
+}
+@media (max-width: 960px) {
+  section.products div.product div.main div.order {
+    margin-top: 10px;
+    grid-auto-columns: 1fr;
+  }
+}
+@media (max-width: 960px) {
+  section.products div.product div.main div.order button {
+    width: 100%;
+  }
+}
+section.products div.product div.main div.order div.more {
+  cursor: pointer;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  height: 100%;
+  width: 65px;
+  border: 1px solid #1d1d1b;
+}
+@media (max-width: 1600px) {
+  section.products div.product div.main div.order div.more {
+    width: 50px;
+  }
+}
+@media (max-width: 960px) {
+  section.products div.product div.main div.order div.more {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 22px;
+  }
+  section.products div.product div.main div.order div.more img {
+    height: 14px;
+  }
+}
+section.products div.product div.main div.order div.more img {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+section.products div.product div.additional {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  background: #fff;
+  height: 0px;
+  width: calc(100% + 4px);
+  margin-left: -2px;
+  overflow: hidden;
+}
+section.products div.product div.additional div.wrap {
+  padding: 0 30px 54px;
+  border: 2px solid #1d1d1b;
+  border-top: unset;
+}
+@media (max-width: 960px) {
+  section.products div.product div.additional div.wrap {
+    padding: 0 15px 20px;
+  }
+}
+section.products div.product div.additional div.note {
+  padding: 17px 0;
+  border-top: 1px solid rgba(29, 29, 27, 0.2);
+  border-bottom: 1px solid rgba(29, 29, 27, 0.2);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+}
+@media (max-width: 960px) {
+  section.products div.product div.additional div.note {
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    padding: 10px 0;
+  }
+}
+section.products div.product div.additional div.usage {
+  margin-top: 17px;
+  display: grid;
+  grid-template-columns: -webkit-max-content 1fr;
+  grid-template-columns: max-content 1fr;
+  grid-template-areas: "Title Title" "Image Text" "Image Button";
+  grid-gap: 0 26px;
+}
+@media (max-width: 960px) {
+  section.products div.product div.additional div.usage {
+    grid-template-areas: "Title" "Image" "Text" "Button";
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+  }
+}
+section.products div.product div.additional div.usage strong {
+  grid-area: Title;
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 130%;
+}
+@media (max-width: 960px) {
+  section.products div.product div.additional div.usage strong {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+}
+section.products div.product div.additional div.usage img {
+  grid-area: Image;
+  width: 114px;
+}
+@media (max-width: 960px) {
+  section.products div.product div.additional div.usage img {
+    width: 59px;
+    margin-bottom: 10px;
+  }
+}
+section.products div.product div.additional div.usage div.text {
+  grid-area: Text;
+  line-height: 20%;
+}
+section.products div.product div.additional div.usage div.text span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  opacity: 0.7;
+}
+@media (max-width: 960px) {
+  section.products div.product div.additional div.usage div.text span {
+    font-size: 12px;
+    line-height: 120%;
+  }
+}
+section.products div.product div.additional div.usage button {
+  grid-area: Button;
+  margin-top: 24px;
+  justify-self: start;
+}
+@media (max-width: 960px) {
+  section.products div.product div.additional div.usage button {
+    margin-top: 20px;
+  }
+}
+section.products div.product.open {
+  border-bottom: unset;
+  border: 2px solid #1d1d1b;
+}
+section.products div.product.open div.main div.order div.more img {
+  -webkit-transform: rotate(225deg);
+      -ms-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+section.products div.product.open div.additional {
+  height: auto;
+  z-index: 2;
+}
+
+section.documents {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+@media (max-width: 960px) {
+  section.documents {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+section.documents div.container {
+  display: grid;
+  grid-template-columns: 1fr -webkit-max-content;
+  grid-template-columns: 1fr max-content;
+  grid-gap: 30px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  margin-bottom: 30px;
+}
+@media (max-width: 960px) {
+  section.documents div.swiper-navigation {
+    display: none;
+  }
+}
+section.documents div.slider {
+  display: grid;
+}
+section.documents div.slider div.swiper {
+  width: 100%;
+  min-width: 0;
+}
+@media (max-width: 640px) {
+  section.documents div.slider div.swiper {
+    overflow: visible;
+  }
+}
+section.documents div.slider div.swiper img {
+  width: 100%;
+  -webkit-filter: grayscale(1) brightness(1.25);
+          filter: grayscale(1) brightness(1.25);
+}
+section.documents div.slider div.swiper a {
+  position: relative;
+}
+section.documents div.slider div.swiper a::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 42px;
+  height: 40px;
+  background-image: url(../images/zoom.svg);
+  background-size: contain;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+section.documents div.slider div.swiper a:hover::after {
+  display: block;
+}
+section.documents div.slider div.swiper a:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+section.callback {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+@media (max-width: 960px) {
+  section.callback {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+section.callback div.container {
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-template-areas: "Title Title" "Text Form";
+  grid-template-columns: 426px 1fr;
+  grid-gap: 32px 20px;
+}
+@media (max-width: 1280px) {
+  section.callback div.container {
+    grid-template-columns: 320px 1fr;
+  }
+}
+@media (max-width: 960px) {
+  section.callback div.container {
+    grid-template-areas: "Title" "Text" "Form";
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
+section.callback h2 {
+  grid-area: Title;
+}
+section.callback div.text {
+  grid-area: Text;
+  display: grid;
+  grid-gap: 66px;
+}
+@media (max-width: 960px) {
+  section.callback div.text {
+    grid-gap: 18px;
+  }
+}
+section.callback div.text p {
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 0.7;
+}
+@media (max-width: 960px) {
+  section.callback div.text p {
+    font-size: 12px;
+    line-height: 120%;
+  }
+}
+section.callback div.text div.phone {
+  display: grid;
+  grid-gap: 5px;
+}
+@media (max-width: 960px) {
+  section.callback div.text div.phone {
+    grid-gap: 4px;
+  }
+}
+section.callback div.text div.phone span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+section.callback div.text div.phone a.tel {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 140%;
+}
+@media (max-width: 960px) {
+  section.callback div.text div.phone a.tel {
+    font-size: 20px;
+  }
+}
+section.callback div.text div.phone a.mail {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+@media (max-width: 960px) {
+  section.callback div.text div.phone a.mail {
+    font-size: 12px;
+  }
+}
+section.callback div.text div.phone a.mail:hover {
+  text-decoration: underline;
+}
+section.callback form {
+  grid-area: Form;
+  display: grid;
+  grid-gap: 10px;
+  max-width: 886px;
+}
+section.callback form label.upload {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: -webkit-max-content auto;
+  grid-template-columns: max-content auto;
+  justify-self: start;
+  grid-gap: 15px;
+  min-height: 49px;
+}
+@media (max-width: 960px) {
+  section.callback form label.upload {
+    grid-gap: 5px;
+  }
+}
+section.callback form label.upload input {
+  display: none;
+}
+@media (max-width: 960px) {
+  section.callback form label.upload img.upload {
+    width: 29px;
+    height: 29px;
+  }
+}
+section.callback form label.upload img.cross {
+  cursor: pointer;
+  display: none;
+}
+section.callback form label.upload span {
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #1d1d1b;
+}
+section.callback form label.upload span.name {
+  display: none;
+}
+section.callback form label.upload.added {
+  justify-items: start;
+  grid-template-columns: minmax(-webkit-min-content, -webkit-max-content) -webkit-max-content;
+  grid-template-columns: minmax(min-content, max-content) max-content;
+}
+section.callback form label.upload.added img.upload {
+  display: none;
+}
+section.callback form label.upload.added img.cross {
+  display: block;
+}
+section.callback form label.upload.added span.default {
+  display: none;
+}
+section.callback form label.upload.added span.name {
+  display: inline;
+}
+section.callback form div.submit {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: -webkit-max-content 1fr;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 19px;
+  margin-top: 23px;
+}
+@media (max-width: 640px) {
+  section.callback form div.submit {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin-top: 10px;
+  }
+}
+section.callback form div.submit div {
+  display: block;
+  max-width: 388px;
+  line-height: 0;
+}
+@media (max-width: 640px) {
+  section.callback form div.submit div {
+    max-width: unset;
+  }
+}
+section.callback form div.submit span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  opacity: 0.5;
+}
+@media (max-width: 960px) {
+  section.callback form div.submit span {
+    font-size: 11px;
+  }
+}
+section.callback form div.submit a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  opacity: 0.8;
+}
+@media (max-width: 640px) {
+  section.callback form div.submit a {
+    font-size: 11px;
+  }
+}
+section.callback form div.submit a:hover {
+  text-decoration: none;
+}/*# sourceMappingURL=catalog.css.map */

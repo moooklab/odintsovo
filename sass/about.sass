@@ -1,0 +1,45 @@
+// Общее 
+@import common/_variables
+@import common/_mixins
+
+//Секции
+@import sections/about/_main
+@import sections/_advantages
+@import sections/about/_team
+@import sections/about/_history
+@import sections/_clients
+@import sections/_callback
+
+section.advantages
+    div.masonry
+        div.text
+            align-content: start
+
+section.clients
+    margin-top: unset
+    margin-bottom: unset
+    background: #f8f8f8
+    padding-top: 50px
+    padding-bottom: 80px
+    +screen(m)
+        margin-top: 60px
+        margin-bottom: 60px
+        background: unset
+        padding-top: unset
+        padding-bottom: unset
+
+section.callback
+    margin-top: unset
+    margin-bottom: unset
+    background: #f8f8f8
+    padding-bottom: 80px
+    +screen(m)
+        margin-top: 60px
+        margin-bottom: 60px
+        background: unset
+        padding-bottom: unset
+
+footer
+    background: #f8f8f8
+    +screen(m)
+        background: $white

@@ -1,0 +1,56 @@
+section.documents
+    margin-top: 80px
+    margin-bottom: 80px
+    +screen(m)
+        margin-top: 60px
+        margin-bottom: 60px
+
+    div.container
+        display: grid
+        grid-template-columns: 1fr max-content
+        grid-gap: 30px
+        align-items: end
+        margin-bottom: 30px
+
+    div.swiper-navigation
+        +screen(m)
+            display: none
+
+    div.slider
+        display: grid
+
+        div.swiper
+            width: 100%
+            min-width: 0
+            +screen(s)
+                overflow: visible
+
+            img
+                width: 100%
+                filter: grayscale(1) brightness(1.25)
+            a
+                position: relative
+                &::after
+                    content: ''
+                    display: none
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    width: 42px
+                    height: 40px
+                    background-image: url(../images/zoom.svg)
+                    background-size: contain
+                    transform: translate(-50%, -50%)
+                &:hover
+                    &::after
+                        display: block
+                    img
+                        filter: grayscale(0)
+
+                
+
+    
+
+
+
+

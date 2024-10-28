@@ -1,0 +1,22 @@
+section.objects
+    div.container
+        div.text
+            h2.underline Объекты
+            p Один из крупнейших поставщиков высококачественных асфальтобетонных смесей в России.
+
+        a(href="objects.html").button.border.desktop смотреть все объекты
+
+    div.slider
+        div.swiper
+            div.swiper-wrapper
+                -for( x = 0; x <= 10; x++ )
+                    div.swiper-slide
+                        a(href="object.html").object 
+                            img(src="images/image.webp", alt="")
+                            div.description
+                                span.date июнь-июль 2023
+                                h3 Горячие асфальтобетонные смеси
+                                strong Вид работ: Один из крупнейших поставщиков
+                                p Один из крупнейших поставщиков высококачественных асфальтобетонных смесей в России.
+
+    a.button.border.mobile смотреть все объекты

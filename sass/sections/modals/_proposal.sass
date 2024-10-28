@@ -1,0 +1,109 @@
+dialog[data-modal-name=proposal]
+    width: 100%
+    height: 100%
+    max-width: unset
+    max-height: unset
+    background: transparent
+    display: grid
+    align-items: center
+    justify-items: center
+
+    div.container
+        position: relative
+        max-width: unset
+        background: white
+        padding: 40px
+        padding-top: 60px
+        max-width: 875px
+        align-self: center
+        +screen(m)
+            display: grid
+            align-content: center
+            height: 100%
+            width: 100%
+            padding: 30px 20px
+
+    h2
+        margin-bottom: 32px
+
+    form
+        display: grid
+        grid-gap: 10px
+
+        label.upload
+            display: grid
+            align-items: center
+            grid-template-columns: max-content auto
+            justify-self: start
+            grid-gap: 15px
+            min-height: 49px
+            +screen(m)
+                grid-gap: 5px
+            input
+                display: none
+            img.upload
+                +screen(m)
+                    width: 29px
+                    height: 29px
+
+            img.cross
+                cursor: pointer
+                display: none
+
+            span
+                font-weight: 400
+                font-size: 12px
+                text-transform: uppercase
+                color: $black
+                &.name
+                    display: none
+
+            &.added
+                justify-items: start
+                grid-template-columns: minmax(min-content, max-content) max-content
+                img.upload
+                    display: none
+                img.cross
+                    display: block
+                span.default
+                    display: none
+                span.name
+                    display: inline
+
+        div.submit
+            display: grid
+            align-items: center
+            grid-template-columns: max-content 1fr
+            grid-gap: 19px
+            margin-top: 23px
+            +screen(s)
+                grid-template-columns: 1fr
+                grid-gap: 10px
+                margin-top: 10px
+
+            div
+                display: block
+                max-width: 388px
+                line-height: 0
+                +screen(s)
+                    max-width: unset
+
+            span
+                font-weight: 400
+                font-size: 14px
+                line-height: 140%
+                opacity: 0.5
+                +screen(m)
+                    font-size: 11px
+
+            a
+                font-weight: 400
+                font-size: 14px
+                line-height: 140%
+                text-decoration: underline
+                text-decoration-skip-ink: none
+                opacity: 0.8
+                +screen(s)
+                    font-size: 11px
+                &:hover
+                    text-decoration: none

@@ -1,0 +1,27 @@
+dialog(data-modal-name="proposal")
+
+    div.container
+
+        div(data-modal-close).cross
+            include ../../../images/cross.svg
+
+        h2.underline Оставить заявку
+
+        form(onsubmit="event.preventDefault(); createDialog('success')")
+            input(type="text", name="name" placeholder="Ваше Имя", required)
+            input(type="tel", name="phone", placeholder="Телефон", required)
+            input(type="mail", name="email", placeholder="Email")
+            textarea(name="message", placeholder="Сообщение")
+
+            label.upload
+                img(src="images/upload.svg", alt="").upload
+                input(type="file", name="", onchange="upload(this)")
+                span.name
+                span.default Приложить файл (до 10 Мб)
+                img(src="images/cross.svg", alt="", onclick="resetUpload(event, this)").cross
+
+            div.submit
+                button.yellow отправить сообщение
+                div
+                    span Нажимая кнопку «Отправить сообщение», вы даёте своё согласие на 
+                    a(href="personal.html") обработку персональных данных

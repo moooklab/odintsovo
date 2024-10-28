@@ -1,0 +1,414 @@
+section.prices h1 {
+  margin-bottom: 24px;
+}
+@media (max-width: 960px) {
+  section.prices h1 {
+    margin-bottom: 20px;
+  }
+}
+section.prices div.tabs {
+  display: grid;
+  grid-gap: 52px;
+}
+@media (max-width: 960px) {
+  section.prices div.tabs {
+    display: none;
+    grid-gap: 30px;
+    width: 100%;
+  }
+}
+@media (max-width: 960px) {
+  section.prices div.tabs_captions {
+    width: 100vw;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-x: scroll;
+  }
+  section.prices div.tabs_captions::-webkit-scrollbar {
+    pointer-events: none;
+    display: none;
+    opacity: 0;
+  }
+}
+section.prices div.tabs_captions div.overflow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+@media (max-width: 960px) {
+  section.prices div.tabs_captions div.overflow {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+}
+section.prices div.tabs_captions div.tab_caption {
+  cursor: pointer;
+  border: 1px solid #1d1d1b;
+  padding: 16px 26px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+@media (max-width: 960px) {
+  section.prices div.tabs_captions div.tab_caption {
+    font-size: 12px;
+    padding: 12px 26px;
+    white-space: nowrap;
+  }
+}
+section.prices div.tabs_captions div.tab_caption.opened {
+  background: #1d1d1b;
+  color: #fff;
+}
+section.prices div.tab_content {
+  display: none;
+}
+section.prices div.tab_content h2 {
+  font-weight: 500;
+}
+section.prices div.tab_content.opened {
+  display: grid;
+}
+section.prices table {
+  max-width: 1490px;
+  border-collapse: collapse;
+  border: 1px solid rgba(29, 29, 27, 0.2);
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+section.prices table thead th {
+  padding: 22px 30px;
+  background: rgba(29, 29, 27, 0.8);
+  text-align: left;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #fff;
+}
+section.prices table tbody tr:nth-child(2n-1) td {
+  background: rgba(228, 228, 228, 0.4);
+}
+section.prices table tbody td {
+  padding: 13px 30px;
+  font-weight: 400;
+  font-size: 20px;
+}
+section.prices table tbody td:not(:last-child) {
+  border-right: 1px solid rgba(29, 29, 27, 0.2);
+}
+section.prices span.note {
+  opacity: 0.7;
+}
+section.prices div.mobile {
+  display: none;
+}
+@media (max-width: 960px) {
+  section.prices div.mobile {
+    display: grid;
+    grid-gap: 20px;
+  }
+}
+section.prices div.mobile span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  opacity: 0.7;
+}
+
+section.vacancy {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+@media (max-width: 960px) {
+  section.vacancy {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+section.vacancy div.job {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 32px;
+}
+@media (max-width: 640px) {
+  section.vacancy div.job {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
+@media (max-width: 640px) {
+  section.vacancy div.job div.text {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+section.vacancy div.job div.text h2 {
+  margin-bottom: 32px;
+}
+@media (max-width: 960px) {
+  section.vacancy div.job div.text h2 {
+    margin-bottom: 10px;
+  }
+}
+section.vacancy div.job div.text span {
+  display: block;
+  opacity: 0.7;
+  max-width: 778px;
+}
+@media (max-width: 960px) {
+  section.vacancy div.job div.text span {
+    font-size: 12px;
+    line-height: 120%;
+  }
+}
+section.vacancy div.job div.text button {
+  margin-top: 24px;
+}
+@media (max-width: 960px) {
+  section.vacancy div.job div.text button {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+section.vacancy div.job img {
+  height: 366px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+@media (max-width: 960px) {
+  section.vacancy div.job img {
+    height: 280px;
+  }
+}
+@media (max-width: 640px) {
+  section.vacancy div.job img {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+section.callback {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+@media (max-width: 960px) {
+  section.callback {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+section.callback div.container {
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-template-areas: "Title Title" "Text Form";
+  grid-template-columns: 426px 1fr;
+  grid-gap: 32px 20px;
+}
+@media (max-width: 1280px) {
+  section.callback div.container {
+    grid-template-columns: 320px 1fr;
+  }
+}
+@media (max-width: 960px) {
+  section.callback div.container {
+    grid-template-areas: "Title" "Text" "Form";
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
+section.callback h2 {
+  grid-area: Title;
+}
+section.callback div.text {
+  grid-area: Text;
+  display: grid;
+  grid-gap: 66px;
+}
+@media (max-width: 960px) {
+  section.callback div.text {
+    grid-gap: 18px;
+  }
+}
+section.callback div.text p {
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 0.7;
+}
+@media (max-width: 960px) {
+  section.callback div.text p {
+    font-size: 12px;
+    line-height: 120%;
+  }
+}
+section.callback div.text div.phone {
+  display: grid;
+  grid-gap: 5px;
+}
+@media (max-width: 960px) {
+  section.callback div.text div.phone {
+    grid-gap: 4px;
+  }
+}
+section.callback div.text div.phone span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+section.callback div.text div.phone a.tel {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 140%;
+}
+@media (max-width: 960px) {
+  section.callback div.text div.phone a.tel {
+    font-size: 20px;
+  }
+}
+section.callback div.text div.phone a.mail {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+@media (max-width: 960px) {
+  section.callback div.text div.phone a.mail {
+    font-size: 12px;
+  }
+}
+section.callback div.text div.phone a.mail:hover {
+  text-decoration: underline;
+}
+section.callback form {
+  grid-area: Form;
+  display: grid;
+  grid-gap: 10px;
+  max-width: 886px;
+}
+section.callback form label.upload {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: -webkit-max-content auto;
+  grid-template-columns: max-content auto;
+  justify-self: start;
+  grid-gap: 15px;
+  min-height: 49px;
+}
+@media (max-width: 960px) {
+  section.callback form label.upload {
+    grid-gap: 5px;
+  }
+}
+section.callback form label.upload input {
+  display: none;
+}
+@media (max-width: 960px) {
+  section.callback form label.upload img.upload {
+    width: 29px;
+    height: 29px;
+  }
+}
+section.callback form label.upload img.cross {
+  cursor: pointer;
+  display: none;
+}
+section.callback form label.upload span {
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #1d1d1b;
+}
+section.callback form label.upload span.name {
+  display: none;
+}
+section.callback form label.upload.added {
+  justify-items: start;
+  grid-template-columns: minmax(-webkit-min-content, -webkit-max-content) -webkit-max-content;
+  grid-template-columns: minmax(min-content, max-content) max-content;
+}
+section.callback form label.upload.added img.upload {
+  display: none;
+}
+section.callback form label.upload.added img.cross {
+  display: block;
+}
+section.callback form label.upload.added span.default {
+  display: none;
+}
+section.callback form label.upload.added span.name {
+  display: inline;
+}
+section.callback form div.submit {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: -webkit-max-content 1fr;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 19px;
+  margin-top: 23px;
+}
+@media (max-width: 640px) {
+  section.callback form div.submit {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin-top: 10px;
+  }
+}
+section.callback form div.submit div {
+  display: block;
+  max-width: 388px;
+  line-height: 0;
+}
+@media (max-width: 640px) {
+  section.callback form div.submit div {
+    max-width: unset;
+  }
+}
+section.callback form div.submit span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  opacity: 0.5;
+}
+@media (max-width: 960px) {
+  section.callback form div.submit span {
+    font-size: 11px;
+  }
+}
+section.callback form div.submit a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  opacity: 0.8;
+}
+@media (max-width: 640px) {
+  section.callback form div.submit a {
+    font-size: 11px;
+  }
+}
+section.callback form div.submit a:hover {
+  text-decoration: none;
+}/*# sourceMappingURL=delivery.css.map */

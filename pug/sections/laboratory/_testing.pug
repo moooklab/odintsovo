@@ -1,0 +1,48 @@
+mixin testing(image, title)
+    div.swiper-slide
+        div.text
+            h2.underline !{ title }
+            span Компания «АБЗ Линт» предлагает лабораторные услуги, связанные с контролем качества дорожно-строительных материалов и работ. Специалисты проведут испытания асфальтобетонных смесей и других материалов на современном оборудовании. Наша дорожно-строительная лаборатория аттестована ФГУ «Менделеевский центр стандартизации, метрологии и сертификации». Благодаря её услугам, стоимость которых отражена в прайс-листе, заказчики могут осуществлять строительство дорог высокого качества.Наши специалисты готовы выполнить лабораторные испытания образцов, определить основные физико-механические показатели, а также показатели сдвигоустойчивости и трещиностойкости. Кроме того, способны провести испытания пробы щебня и песка, оказать другие услуги.
+            div.docs
+                a(href="images/image.webp", download).doc
+                    img(src="images/gost.svg", alt="")
+                    span ГОСТ 9128–2013
+                    img(src="images/download.svg", alt="")
+                a(href="images/image.webp", download).doc
+                    img(src="images/gost.svg", alt="")
+                    span ГОСТ 9128–2013
+                    img(src="images/download.svg", alt="")
+                a(href="images/image.webp", download).doc
+                    img(src="images/gost.svg", alt="")
+                    span ГОСТ 9128–2013
+                    img(src="images/download.svg", alt="")
+        img(src=image, alt="").preview
+
+section.testing
+    div.container
+
+        div.swiper.captions
+            div.swiper-wrapper
+                div.swiper-slide
+                    h3 Испытание #[br]асфальтобетона
+                    img(src="images/image.webp", alt="")
+                div.swiper-slide
+                    h3 испытание #[br]бетона
+                    img(src="images/image.webp", alt="")
+                div.swiper-slide
+                    h3 Испытание #[br]битума
+                    img(src="images/image.webp", alt="")
+                div.swiper-slide
+                    h3 Испытание #[br]противогололедных #[br]материалов
+                    img(src="images/image.webp", alt="")
+                div.swiper-slide
+                    h3 испытание #[br]грунта
+                    img(src="images/image.webp", alt="")
+
+        div.swiper.contents
+            div.swiper-wrapper
+                +testing('images/image.webp', 'Испытание <br>асфальтобетона')
+                +testing('images/image.webp', 'Испытание <br>бетона')
+                +testing('images/image.webp', 'Испытание <br>битума')
+                +testing('images/image.webp', 'Испытание <br>противогололедных<br>материалов')
+                +testing('images/image.webp', 'Испытание <br>грунта')

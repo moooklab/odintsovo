@@ -1,0 +1,42 @@
+mixin object(image, title)
+    div.object
+        img(src=image, alt=title)
+        h2= title
+
+section.objects
+    div.container
+
+        h2.underline Наши объекты
+
+        div.filter
+
+            div.tags
+                div.overflow
+                    div.tag.opened Все
+                    div.tag Комплексное благоустройство
+                    div.tag Все типы дорог
+                    div.tag Дачные посёлки
+
+            div.sort
+                a(href="?sort=asc").active Сначала новые
+                a(href="?sort=desc") Сначала старые
+
+        div.years
+            div.year
+                h2 2024
+                div.list
+                    +object('images/image.webp', 'Реконструкция ул. Крисанова в Перми')
+                    +object('images/image.webp', 'Реконструкция ул. Крисанова в Перми')
+                    +object('images/image.webp', 'Реконструкция ул. Крисанова в Перми')
+                    +object('images/image.webp', 'Реконструкция ул. Крисанова в Перми')
+                    +object('images/image.webp', 'Реконструкция ул. Крисанова в Перми')
+                    +object('images/image.webp', 'Реконструкция ул. Крисанова в Перми')
+
+            div.year
+                h2 2023
+                div.list
+                    +object('images/image.webp', 'Реконструкция ул. Крисанова в Перми')
+                    +object('images/image.webp', 'Реконструкция ул. Крисанова в Перми')
+                    +object('images/image.webp', 'Реконструкция ул. Крисанова в Перми')
+
+        include ../_pagination.pug

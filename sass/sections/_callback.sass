@@ -1,0 +1,149 @@
+section.callback
+    margin-top: 80px
+    margin-bottom: 80px
+    +screen(m)
+        margin-top: 60px
+        margin-bottom: 60px
+
+    div.container
+        display: grid
+        align-items: start
+        grid-template-areas: 'Title Title' 'Text Form'
+        grid-template-columns: 426px 1fr
+        grid-gap: 32px 20px
+        +screen(l)
+            grid-template-columns: 320px 1fr
+        +screen(m)
+            grid-template-areas: 'Title' 'Text' 'Form'
+            grid-template-columns: 1fr
+            grid-gap: 10px
+
+    h2
+        grid-area: Title
+
+    div.text
+        grid-area: Text
+        display: grid
+        grid-gap: 66px
+        +screen(m)
+            grid-gap: 18px
+
+        p
+            font-weight: 400
+            font-size: 16px
+            opacity: 0.7
+            +screen(m)
+                font-size: 12px
+                line-height: 120%
+
+        div.phone
+            display: grid
+            grid-gap: 5px
+            +screen(m)
+                grid-gap: 4px
+
+            span
+                font-weight: 400
+                font-size: 12px
+                line-height: 140%
+                letter-spacing: 0.02em
+                text-transform: uppercase
+                opacity: 0.5
+            a.tel
+                font-weight: 400
+                font-size: 28px
+                line-height: 140%
+                +screen(m)
+                    font-size: 20px
+            a.mail
+                font-weight: 400
+                font-size: 16px
+                line-height: 140%
+                +screen(m)
+                    font-size: 12px
+                &:hover
+                    text-decoration: underline
+
+    form
+        grid-area: Form
+        display: grid
+        grid-gap: 10px
+        max-width: 886px
+
+        label.upload
+            display: grid
+            align-items: center
+            grid-template-columns: max-content auto
+            justify-self: start
+            grid-gap: 15px
+            min-height: 49px
+            +screen(m)
+                grid-gap: 5px
+            input
+                display: none
+            img.upload
+                +screen(m)
+                    width: 29px
+                    height: 29px
+
+            img.cross
+                cursor: pointer
+                display: none
+
+            span
+                font-weight: 400
+                font-size: 12px
+                text-transform: uppercase
+                color: $black
+                &.name
+                    display: none
+
+            &.added
+                justify-items: start
+                grid-template-columns: minmax(min-content, max-content) max-content
+                img.upload
+                    display: none
+                img.cross
+                    display: block
+                span.default
+                    display: none
+                span.name
+                    display: inline
+
+        div.submit
+            display: grid
+            align-items: center
+            grid-template-columns: max-content 1fr
+            grid-gap: 19px
+            margin-top: 23px
+            +screen(s)
+                grid-template-columns: 1fr
+                grid-gap: 10px
+                margin-top: 10px
+
+            div
+                display: block
+                max-width: 388px
+                line-height: 0
+                +screen(s)
+                    max-width: unset
+
+            span
+                font-weight: 400
+                font-size: 14px
+                line-height: 140%
+                opacity: 0.5
+                +screen(m)
+                    font-size: 11px
+
+            a
+                font-weight: 400
+                font-size: 14px
+                line-height: 140%
+                text-decoration: underline
+                text-decoration-skip-ink: none
+                opacity: 0.8
+                +screen(s)
+                    font-size: 11px
+                &:hover
+                    text-decoration: none

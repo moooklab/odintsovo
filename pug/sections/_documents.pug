@@ -1,0 +1,28 @@
+mixin document(image)
+    div.swiper-slide
+        a(href=image, target="blank"): img(src=image, alt="")
+
+section.documents
+    div.container
+        h2.underline Документация
+        include _swiper-navigation.pug
+
+    div.slider
+        div.swiper
+            div.swiper-wrapper
+                +document('images/certificate.webp')
+                +document('images/certificate.webp')
+                +document('images/certificate.webp')
+                +document('images/certificate.webp')
+                +document('images/certificate.webp')
+                +document('images/certificate.webp')
+                +document('images/certificate.webp')
+                +document('images/certificate.webp')
+                +document('images/certificate.webp')
+                +document('images/certificate.webp')
+                +document('images/certificate.webp')
+                +document('images/certificate.webp')
+                +document('images/certificate.webp')
+                +document('images/certificate.webp')
+                +document('images/certificate.webp')
+                +document('images/certificate.webp')

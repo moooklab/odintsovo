@@ -1,0 +1,123 @@
+section.advantages
+    padding-top: 50px
+    background: #F8F8F8
+    +screen(s)
+        padding-top: unset
+
+    div.masonry
+        position: relative
+        display: grid
+        align-items: start
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 20px
+        z-index: 2
+        +screen(l)
+            grid-template-columns: repeat(3, 1fr)
+        +screen(m)
+            grid-gap: 10px
+        +screen(s)
+            grid-template-columns: repeat(2, 1fr)
+
+        div.column
+            display: grid
+            grid-gap: 20px
+            +screen(l)
+                display: contents
+            &:nth-child(3)
+                margin-top: 89px
+            &:nth-child(4)
+                margin-top: 161px
+
+        div.text
+            display: grid
+            align-content: center
+            grid-gap: 32px
+            aspect-ratio: 1 / 1
+            +screen(l)
+                grid-column: 2 span
+                height: 100%
+                aspect-ratio: unset
+            +screen(m)
+                grid-gap: 10px
+                padding: 30px 0 14px
+            p
+                font-weight: 400
+                font-size: 16px
+                line-height: 130%
+                opacity: 0.7
+                max-width: 344px
+                +screen(m)
+                    font-size: 12px
+                    line-height: 120%
+
+        div.image
+            aspect-ratio: 1 / 1
+            +screen(m)
+                grid-row: 1 span
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                object-position: center center
+
+        div.item
+            padding: 20px 30px
+            padding-bottom: 40px
+            display: grid
+            align-items: start
+            grid-template-rows: max-content 1fr
+            grid-gap: 40px
+            border-bottom: 2px solid #f3f3f3
+            background: $white
+            +screen(l)
+                aspect-ratio: 1 / 1
+            +screen(m)
+                padding: 10px
+            img
+                width: 55px
+                height: 55px
+                object-fit: contain
+                object-position: center center
+                +screen(m)
+                    width: 36px
+                    height: 36px
+            span
+                display: block
+                max-width: 240px
+                line-height: 130%
+                opacity: 0.7
+                +screen(m)
+                    font-size: 12px
+                    line-height: 120%
+                    letter-spacing: -0.01em
+                    align-self: end
+
+        +screen(s)
+            div.column:nth-child(1) 
+                & > *:nth-child(1)
+                    order: 1
+                & > *:nth-child(2)
+                    order: 3
+                & > *:nth-child(3)
+                    order: 4
+            div.column:nth-child(2)
+                & > *:nth-child(1)
+                    order: 2
+                & > *:nth-child(2)
+                    order: 5
+                & > *:nth-child(3)
+                    order: 6
+            div.column:nth-child(3)
+                & > *:nth-child(1)
+                    order: 7
+                & > *:nth-child(2)
+                    order: 8
+                & > *:nth-child(3)
+                    order: 9
+            div.column:nth-child(4)
+                & > *:nth-child(1)
+                    order: 12
+                & > *:nth-child(2)
+                    order: 11
+                & > *:nth-child(3)
+                    order: 10

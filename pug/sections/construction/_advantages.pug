@@ -1,0 +1,33 @@
+mixin service(image, title)
+    div.service
+        img(src=image, alt="")
+        h3= title
+
+mixin advantage(icon, title)
+    div.advantage
+        img(src=icon, alt="")
+        span= title
+
+section.advantages
+    div.container
+
+        h2.underline Наши преимущества
+
+        div.advantages
+            +advantage('images/advantage_3.svg', 'Собственные мощности производства асфальта (завод в Одинцово)')
+            +advantage('images/advantage_4.svg', 'Опыт работы со сложными проектами 25 лет')
+            +advantage('images/advantage_5.svg', 'Качественный подход к строительству дорог')
+            +advantage('images/advantage_6.svg', 'Ответственное строительство дорог «под ключ»')
+
+        h2.underline Мы строим
+
+        div.services
+            +service('images/image.webp', 'Федеральные магистрали')
+            +service('images/image.webp', 'Трассы регионального значения')
+            +service('images/image.webp', 'Промышленные дороги')
+            +service('images/image.webp', 'Временные дороги')
+            +service('images/image.webp', 'Дорожные развязки')
+            +service('images/image.webp', 'Мосты, автопавильоны, автодромы')
+            +service('images/image.webp', 'Подъездные пути к предприятиям')
+
+        include ../_pagination.pug

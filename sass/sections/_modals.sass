@@ -1,0 +1,44 @@
+html:has(dialog[open])
+    overflow-y: hidden
+    margin-right: var(--scrollbar-width)
+
+dialog
+    margin: auto
+    opacity: 0
+    animation-name: dialog
+    animation-delay: .5s
+    animation-duration: .5s
+    animation-fill-mode: forwards
+    div.cross
+        cursor: pointer
+        position: absolute
+        top: 30px
+        right: 30px
+        +screen(m)
+            top: 20px
+            right: 20px
+        svg
+            width: 20px
+            height: 20px
+            transition: all .2s
+            path
+                stroke-width: 0.5px
+        &:hover
+            svg
+                transform: rotate(180deg)
+    &::backdrop
+        position: fixed
+        inset: 0px
+        background: rgba(0,0,0,.75)
+    &::-webkit-scrollbar
+        width: 0
+        height: 0
+
+@keyframes dialog
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+@import modals/_proposal
+@import modals/_success

@@ -1,0 +1,40 @@
+footer.animate
+    div.container.top
+
+        a(href="index.html").logotype
+            include ../../images/logotype.svg
+
+        div.socials
+            a(href="https://vk.com", tagert="blank")
+                include ../../images/vkontakte.svg
+            a(href="https://telegram.org", tagert="blank")
+                include ../../images/telegram.svg
+
+        menu
+            li: a(href="about.html") О компании
+            li: a(href="catalog.html") Продукция
+            li: a(href="delivery.html") Доставка
+            li: a(href="laboratory.html") Лаборатория
+            li: a(href="objects.html") Объекты
+            li: a(href="contacts.html") Контакты
+
+        div.contacts
+            div.adress
+                span Адрес:
+                p г. Москва, Академика Сахарова 23
+            div.phone
+                span Отдел продаж:
+                a(href="tel:+7 812 777-89-84").tel +7 812 777-89-84
+                a(href="mailto: info@abz.ru").mail info@abz.ru
+
+        div.buttons
+            button(data-modal-target="proposal").yellow
+                span Оставить заявку
+            div.price
+                img(src="images/pricelist.svg", alt="")
+                span Прайс-лист
+
+    div.container.bottom
+        span.copyright © 2006–2024 Все права защищены
+        a(href="personal.html").personal Согласие на обработку персональных данных
+        a(href="https://mwi.me/").mwi: img(src="images/mwi.svg", alt="")

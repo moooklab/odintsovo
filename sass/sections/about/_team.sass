@@ -1,0 +1,80 @@
+section.team
+    padding-top: 80px
+    padding-bottom: 34px
+    background: #F8F8F8
+    +screen(m)
+        padding-top: 60px
+    +screen(s)
+        padding-bottom: 12px
+
+    div.container
+        position: relative
+        display: grid
+        grid-gap: 32px
+        +screen(m)
+            grid-gap: 10px
+
+    div.swiper
+        width: 100%
+        min-width: 0
+        +screen(s)
+            overflow: visible
+
+    div.swiper-navigation
+        justify-content: space-between
+        +screen(s)
+            display: none
+
+    div.swiper-pagination
+        position: absolute
+        bottom: 28px
+        left: 73px
+        top: unset
+        height: 1px
+        background: #cecece
+        width: calc(100% - 110px - 36px)
+        span
+            background: $black
+            height: 1px
+        +screen(s)
+            display: none
+
+    div.swiper-slide
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        +screen(l)
+            grid-template-columns: 1fr
+
+        img
+            width: 100%
+            aspect-ratio: 3 / 4
+
+        div.text
+            display: grid
+            align-items: end
+            align-content: end
+            grid-gap: 28px
+            padding: 68px 60px
+            +screen(l)
+                grid-gap: 12px
+                padding: 24px
+            +screen(m)
+                padding: 12px 10px
+            h2
+                font-weight: 700
+                font-size: 36px
+                line-height: 121%
+                text-transform: uppercase
+                color: #3b3b3b
+                +screen(xl)
+                    font-size: 26px
+                +screen(m)
+                    font-size: 18px
+                +screen(s)
+                    font-size: 12px
+            span
+                opacity: 0.5
+                +screen(m)
+                    font-weight: 400
+                    font-size: 11px
+                    line-height: 130%

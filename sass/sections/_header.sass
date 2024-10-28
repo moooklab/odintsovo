@@ -1,0 +1,339 @@
+header
+    position: sticky
+    top: 0
+    background: white
+    z-index: 999
+    transition: all .3s
+
+    div.container
+        position: relative
+        display: grid
+        grid-auto-flow: column
+        grid-auto-columns: max-content
+        justify-content: space-between
+        align-items: center
+        grid-gap: 30px
+        padding-top: 40px
+        padding-bottom: 33px
+        +screen(l)
+            padding-top: 20px
+            padding-bottom: 20px
+            position: static
+
+        &::after
+            content: ''
+            position: absolute
+            top: 100%
+            left: 0
+            width: 100%
+            height: 1px
+            background: rgba(29, 29, 27, 0.5)
+            transition: width 1s
+            +screen(l)
+                background: rgba(29, 29, 27, 0.2)
+
+    a.logotype
+        display: block
+        line-height: 0px
+        width: 150px
+        svg
+            width: 100%
+            height: auto
+
+        +screen(xl)
+            width: 120px
+        +screen(s)
+            order: 2
+            width: 90px
+
+    menu
+        display: grid
+        grid-auto-flow: column
+        grid-auto-columns: max-content
+        grid-gap: 30px
+        font-weight: 400
+        font-size: 14px
+        text-transform: uppercase
+        +screen(xl)
+            grid-gap: 20px
+        +screen(l)
+            display: none
+
+        li
+            position: relative
+            display: grid
+            width: max-content
+            a
+                padding: 5px 0
+            &:after
+                content: ''
+                position: absolute
+                top: 100%
+                left: 0
+                width: 0
+                height: 2px
+                background: $yellow
+                transition: width .3s
+            &:hover
+                &::after
+                    width: 100%
+
+    div.contact
+        display: grid
+        grid-auto-flow: column
+        grid-auto-columns: max-content
+        grid-gap: 40px
+        +screen(xl)
+            grid-gap: 20px
+        +screen(s)
+            order: 1
+
+        div.price
+            cursor: pointer
+            display: grid
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            align-items: center
+            justify-content: center
+            grid-gap: 10px
+            outline: 1px solid $black
+            padding: 12px 32px
+            font-weight: 500
+            font-size: 14px
+            line-height: 130%
+            letter-spacing: 0.01em
+            text-transform: uppercase
+            background: transparent
+            transition: background .3s
+            &:hover
+                background: $yellow
+                outline-color: $yellow
+                outline-width: 1px
+
+            +screen(xl)
+                padding: 12px
+                width: 50px
+                span
+                    display: none
+            +screen(s)
+                display: none
+
+            img.white
+                display: none
+
+        button.yellow
+            +screen(s)
+                display: none
+
+        a.phone
+            display: grid
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            align-items: center
+            justify-content: center
+            grid-gap: 5px
+            +screen(xl)
+                width: 50px
+                height: 50px
+                border: 1px solid $black
+            +screen(s)
+                width: 25px
+                height: 25px
+
+            svg
+                path
+                    stroke: $yellow
+                    +screen(xl)
+                        stroke: $black
+                +screen(s)
+                    width: 14px
+                    height: 14px
+            span
+                text-decoration: underline dotted 0.5px
+                text-underline-offset: 4px
+                +screen(xl)
+                    display: none
+            
+            &:hover
+                span
+                    text-decoration: unset
+
+    div.mobile_menu
+        cursor: pointer
+        display: none
+        align-items: center
+        justify-content: center
+        width: 50px
+        height: 50px
+        border: 1px solid $black
+        order: 3
+        +screen(l)
+            display: grid
+        +screen(s)
+            width: 25px
+            height: 25px
+
+        div.menu_icon
+            display: grid
+        div.cross_icon
+            display: none
+
+        &.opened
+            div.menu_icon
+                display: none
+            div.cross_icon
+                display: grid
+
+    &.transparent
+        background: transparent
+        color: $white
+
+        div.container
+            &::after
+                background: rgba(255, 255, 255, 0.5)
+
+        a.logotype
+            svg
+                path
+                    fill: white
+        div.contact
+            div.price
+                outline: 1px solid $white
+                img.black
+                    display: none
+                img.white
+                    display: block
+                &:hover
+                    outline: 1px solid $yellow
+                    color: $black
+                    img.black
+                        display: block
+                    img.white
+                        display: none
+            a.phone
+                +screen(xl)
+                    border: 1px solid $white
+                    svg
+                        path
+                            stroke: white
+
+        div.mobile_menu
+            border: 1px solid $white
+            svg
+                path
+                    stroke: $white
+
+    &.sticky
+        box-shadow: 0 4px 22px rgba(0, 0, 0, 0.1)
+        div.container
+            &::after
+                width: 0
+
+section.menu
+    position: sticky
+    top: 90px
+    display: grid
+    grid-template-rows: 0fr
+    z-index: 99
+    transition: all .3s
+    
+    +screen(s)
+        top: 66px
+
+    div.mobile_wrap
+        overflow: hidden
+        // border-top: 1px solid rgba(29, 29, 27, 0.2)
+        
+    button.yellow
+        width: 100%
+        border: unset
+        margin-bottom: 10px
+    
+    menu
+        display: grid
+        grid-gap: 12px
+        margin-top: 20px
+
+        li
+            a
+                font-weight: 400
+                font-size: 12px
+                text-transform: uppercase
+                    
+    div.price
+        cursor: pointer
+        display: grid
+        grid-auto-flow: column
+        grid-auto-columns: max-content
+        align-items: center
+        justify-content: center
+        grid-gap: 10px
+        border: 1px solid $black
+        padding: 12px 32px
+        font-weight: 500
+        font-size: 14px
+        line-height: 130%
+        letter-spacing: 0.01em
+        text-transform: uppercase
+        background: transparent
+        transition: background .3s
+        margin-bottom: 20px
+        +screen(m)
+            font-size: 12px
+            line-height: 120%
+            padding: unset
+            height: 40px
+        &:hover
+            background: $yellow
+            border-color: $yellow
+            border-width: 1px
+
+    a.phone
+        display: grid
+        grid-auto-flow: column
+        grid-auto-columns: max-content
+        align-items: center
+        justify-content: start
+        grid-gap: 5px
+        margin-top: 20px
+        margin-bottom: 20px
+
+        svg
+            path
+                stroke: $yellow
+        span
+            text-decoration: underline dotted 0.5px
+            text-underline-offset: 4px
+        
+        &:hover
+            span
+                text-decoration: unset
+
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: $white
+        z-index: -1
+        pointer-events: none
+
+    &::before
+        content: ''
+        position: fixed
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background: rgba(29, 29, 27, 0.7)
+        z-index: -2
+        opacity: 0
+        transition: all .3s
+        pointer-events: none
+
+    &.opened
+        grid-template-rows: 1fr
+        &::before
+            opacity: 1

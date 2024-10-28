@@ -1,0 +1,9 @@
+extends common/_layout.pug
+
+block links
+    link(rel="stylesheet", href="css/delivery.css")
+
+block content
+    include sections/delivery/_prices.pug
+    include sections/delivery/_vacancy.pug
+    include sections/_callback.pug

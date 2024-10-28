@@ -1,0 +1,10 @@
+extends common/_layout.pug
+
+block links
+    link(rel="stylesheet", href="css/laboratory.css")
+
+block content
+    include sections/laboratory/_main.pug
+    include sections/laboratory/_testing.pug
+    include sections/_documents.pug
+    include sections/_callback.pug

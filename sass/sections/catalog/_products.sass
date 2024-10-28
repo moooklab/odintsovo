@@ -1,0 +1,233 @@
+section.products
+
+    h1
+        margin-bottom: 24px
+        +screen(m)
+            margin-bottom: 20px
+
+    div.tags
+        margin-bottom: 32px
+        +screen(m)
+            width: 100vw
+            margin-left: -20px
+            margin-right: -20px
+            margin-bottom: 30px
+            padding-left: 20px
+            padding-right: 20px
+            overflow-x: scroll
+            &::-webkit-scrollbar
+                pointer-events: none
+                display: none
+                opacity: 0
+
+        div.overflow
+            display: flex
+            flex-wrap: wrap
+            gap: 10px
+            +screen(m)
+                width: max-content
+
+        div.tag
+            cursor: pointer
+            border: 1px solid $black
+            padding: 16px 26px
+            font-weight: 400
+            font-size: 14px
+            line-height: 130%
+            letter-spacing: 0.01em
+            text-transform: uppercase
+            +screen(m)
+                font-size: 12px
+                padding: 12px 26px
+                white-space: nowrap
+            
+            &.opened
+                background: $black
+                color: $white
+
+    div.products
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 10px 20px
+        +screen(s)
+            grid-template-columns: 1fr
+
+    div.product
+        position: relative
+        padding: 30px
+        border: 2px solid #f3f3f3
+        box-sizing: border-box
+        background: $white
+        +screen(m)
+            padding: 15px
+
+        div.main
+            display: grid
+            align-items: start
+            grid-template-areas: 'Image Title Order' 'Image Price Order'
+            grid-template-columns: max-content 1fr max-content
+            grid-gap: 18px 26px
+            +screen(xl)
+                grid-template-areas: 'Image Title' 'Image Price' 'Image Order'
+                grid-template-columns: max-content 1fr
+            +screen(m)
+                align-items: end
+                grid-template-areas: 'Image Price' 'Title Title' 'Order Order'
+                gap: 10px
+
+            img.image
+                grid-area: Image
+                aspect-ratio: 1 / 1
+                width: 114px
+                object-fit: cover
+                object-position: center center
+                +screen(xl)
+                    width: 90px
+                +screen(m)
+                    width: 66px
+
+            h3
+                grid-area: Title
+
+            div.price
+                grid-area: Price
+                display: grid
+                strong
+                    font-family: "Cormorant", serif
+                    font-weight: 700
+                    font-size: 36px
+                    text-transform: uppercase
+                    +screen(m)
+                        font-size: 22px
+                span
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 130%
+                    opacity: 0.5
+
+            div.order
+                grid-area: Order
+                display: grid
+                grid-auto-flow: column
+                grid-auto-columns: max-content
+                grid-gap: 11px
+                +screen(m)
+                    margin-top: 10px
+                    grid-auto-columns: 1fr
+
+                button
+                    +screen(m)
+                        width: 100%
+
+                div.more
+                    cursor: pointer
+                    display: grid
+                    align-items: center
+                    justify-items: center
+                    height: 100%
+                    width: 65px
+                    border: 1px solid $black
+                    +screen(xl)
+                        width: 50px
+                    +screen(m)
+                        position: absolute
+                        top: 15px
+                        right: 15px
+                        width: 30px
+                        height: 22px
+                        img
+                            height: 14px
+                    img
+                        transition: all .3s
+
+        div.additional
+            position: absolute
+            top: 100%
+            left: 0
+            z-index: 1
+            background: $white
+            height: 0px
+            width: calc(100% + 4px)
+            margin-left: -2px
+            overflow: hidden
+
+            div.wrap
+                padding: 0 30px 54px
+                border: 2px solid $black
+                border-top: unset
+                +screen(m)
+                    padding: 0 15px 20px
+
+            div.note
+                padding: 17px 0
+                border-top: 1px solid rgba(29, 29, 27, 0.2)
+                border-bottom: 1px solid rgba(29, 29, 27, 0.2)
+                font-weight: 400
+                font-size: 14px
+                line-height: 130%
+                +screen(m)
+                    font-size: 12px
+                    line-height: 120%
+                    letter-spacing: -0.01em
+                    padding: 10px 0
+
+            div.usage
+                margin-top: 17px
+                display: grid
+                grid-template-columns: max-content 1fr
+                grid-template-areas: 'Title Title' 'Image Text' 'Image Button'
+                grid-gap: 0 26px
+                +screen(m)
+                    grid-template-areas: 'Title' 'Image' 'Text' 'Button'
+                    grid-template-columns: 1fr
+                    margin-top: 20px
+
+                strong
+                    grid-area: Title
+                    margin-bottom: 16px
+                    font-weight: 600
+                    font-size: 14px
+                    line-height: 130%
+                    +screen(m)
+                        font-size: 12px
+                        margin-bottom: 10px
+
+                img
+                    grid-area: Image
+                    width: 114px
+                    +screen(m)
+                        width: 59px
+                        margin-bottom: 10px
+
+
+                div.text
+                    grid-area: Text
+                    line-height: 20%
+                    span
+                        font-weight: 400
+                        font-size: 16px
+                        line-height: 130%
+                        opacity: 0.7
+                        +screen(m)
+                            font-size: 12px
+                            line-height: 120%
+
+                button
+                    grid-area: Button
+                    margin-top: 24px
+                    justify-self: start
+                    +screen(m)
+                        margin-top: 20px
+
+        &.open
+            border-bottom: unset
+            border: 2px solid $black
+            div.main
+                div.order
+                    div.more
+                        img
+                            transform: rotate(225deg)
+            div.additional
+                height: auto
+                z-index: 2
+
