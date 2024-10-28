@@ -1553,4 +1553,133 @@ dialog[data-modal-name=success] a.button {
   dialog[data-modal-name=success] a.button {
     width: 100%;
   }
+}
+
+dialog[data-modal-name=object] {
+  width: 100%;
+  height: 100%;
+  max-width: unset;
+  max-height: unset;
+  background: transparent;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: end;
+}
+@media (max-width: 960px) {
+  dialog[data-modal-name=object] {
+    font-size: 12px;
+  }
+}
+dialog[data-modal-name=object] div.cross {
+  position: absolute;
+}
+dialog[data-modal-name=object] div.container {
+  display: grid;
+  background: #fff;
+  padding: 50px;
+  padding-top: 80px;
+  max-width: 1000px;
+}
+@media (max-width: 960px) {
+  dialog[data-modal-name=object] div.container {
+    padding: 20px;
+    padding-top: 54px;
+  }
+}
+dialog[data-modal-name=object] div.slider {
+  position: relative;
+  display: grid;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: calc(100% + 100px);
+  margin-left: -50px;
+  overflow: hidden;
+}
+@media (max-width: 960px) {
+  dialog[data-modal-name=object] div.slider {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+  }
+}
+dialog[data-modal-name=object] div.swiper-navigation {
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 20px;
+  width: calc(100% - 40px);
+  z-index: 999;
+  pointer-events: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+dialog[data-modal-name=object] div.swiper-navigation div.arrow {
+  pointer-events: auto;
+  background: #fff;
+  border: unset;
+}
+dialog[data-modal-name=object] div.swiper {
+  width: 100%;
+  min-width: 0;
+  overflow: visible;
+}
+dialog[data-modal-name=object] div.swiper img {
+  width: 100%;
+  aspect-ratio: 9/6;
+}
+dialog[data-modal-name=object] h2 {
+  margin-top: 40px;
+}
+@media (max-width: 960px) {
+  dialog[data-modal-name=object] h2 {
+    margin-top: 20px;
+  }
+}
+dialog[data-modal-name=object] div.params {
+  display: grid;
+  grid-gap: 12px;
+  margin-top: 18px;
+  margin-bottom: 32px;
+  background: #F8F8F8;
+  padding: 20px;
+  padding-bottom: 28px;
+}
+@media (max-width: 960px) {
+  dialog[data-modal-name=object] div.params {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-top: 14px;
+  }
+}
+dialog[data-modal-name=object] div.params div.param {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: 5px;
+}
+dialog[data-modal-name=object] div.params div.param div {
+  border-bottom: 1px dashed #1d1d1b;
+  opacity: 0.2;
+}
+dialog[data-modal-name=object] div.about {
+  display: grid;
+  grid-gap: 16px;
+}
+@media (max-width: 960px) {
+  dialog[data-modal-name=object] div.about {
+    grid-gap: 10px;
+  }
+}
+dialog[data-modal-name=object] div.about strong {
+  font-weight: 500;
+  font-size: 16px;
+}
+@media (max-width: 960px) {
+  dialog[data-modal-name=object] div.about strong {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=common.css.map */

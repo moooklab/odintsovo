@@ -1,0 +1,98 @@
+dialog[data-modal-name=object]
+    width: 100%
+    height: 100%
+    max-width: unset
+    max-height: unset
+    background: transparent
+    display: grid
+    align-items: center
+    justify-items: end
+    +screen(m)
+        font-size: 12px
+
+    div.cross
+        position: absolute
+
+    div.container
+        display: grid
+        background: $white
+        padding: 50px
+        padding-top: 80px
+        max-width: 1000px
+        +screen(m)
+            padding: 20px
+            padding-top: 54px
+
+    div.slider
+        position: relative
+        display: grid
+        padding-left: 50px
+        padding-right: 50px
+        width: calc(100% + 100px)
+        margin-left: -50px
+        overflow: hidden
+        +screen(m)
+            padding-left: 20px
+            padding-right: 20px
+            width: calc(100% + 40px)
+            margin-left: -20px
+
+    div.swiper-navigation
+        position: absolute
+        top: calc(50% - 10px)
+        left: 20px
+        width: calc(100% - 40px)
+        z-index: 999
+        pointer-events: none
+        justify-content: space-between
+        div.arrow
+            pointer-events: auto
+            background: $white
+            border: unset
+
+    div.swiper
+        width: 100%
+        min-width: 0
+        overflow: visible
+
+        img
+            width: 100%
+            aspect-ratio: 9 / 6
+
+    h2
+        margin-top: 40px
+        +screen(m)
+            margin-top: 20px
+
+    div.params
+        display: grid
+        grid-gap: 12px
+        margin-top: 18px
+        margin-bottom: 32px
+        background: #F8F8F8
+        padding: 20px
+        padding-bottom: 28px
+        +screen(m)
+            width: calc(100% + 40px)
+            margin-left: -20px
+            padding-bottom: 20px
+            margin-bottom: 20px
+            margin-top: 14px
+        div.param
+            display: grid
+            grid-template-columns: auto 1fr auto
+            grid-gap: 5px
+            div
+                border-bottom: 1px dashed $black
+                opacity: 0.2
+
+    div.about
+        display: grid
+        grid-gap: 16px
+        +screen(m)
+            grid-gap: 10px
+        strong
+            font-weight: 500
+            font-size: 16px
+            +screen(m)
+                font-size: 14px

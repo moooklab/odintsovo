@@ -314,6 +314,7 @@ section.objects div.years div.year div.list {
   }
 }
 section.objects div.years div.year div.object {
+  cursor: pointer;
   display: grid;
   -ms-flex-line-pack: start;
       align-content: start;

@@ -42,7 +42,6 @@ const mainSliderTexts = new Swiper(document.querySelector('section.main div.swip
     }
 })
 
-
 const clientSlider = new Swiper(document.querySelector('section.clients div.swiper'), {
     slidesPerView: 1.5,
     navigation: {
