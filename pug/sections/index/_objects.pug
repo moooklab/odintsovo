@@ -1,3 +1,13 @@
+mixin object(image, date, title)
+    div.swiper-slide
+        a(data-modal-target="object").object
+            img(src=image, alt="")
+            div.description
+                span.date= date
+                h3= title
+                strong Вид работ: Один из крупнейших поставщиков
+                p Один из крупнейших поставщиков высококачественных асфальтобетонных смесей в России.
+
 section.objects
     div.container
         div.text
@@ -9,14 +19,13 @@ section.objects
     div.slider
         div.swiper
             div.swiper-wrapper
-                -for( x = 0; x <= 10; x++ )
-                    div.swiper-slide
-                        a(data-modal-target="object").object 
-                            img(src="images/image.webp", alt="")
-                            div.description
-                                span.date июнь-июль 2023
-                                h3 Горячие асфальтобетонные смеси
-                                strong Вид работ: Один из крупнейших поставщиков
-                                p Один из крупнейших поставщиков высококачественных асфальтобетонных смесей в России.
+                +object('images/webp/15.webp', 'июнь-июль 2023', 'Горячие асфальтобетонные смеси')
+                +object('images/webp/16.webp', 'июнь-июль 2023', 'Горячие асфальтобетонные смеси')
+                +object('images/webp/17.webp', 'июнь-июль 2023', 'Горячие асфальтобетонные смеси')
+                +object('images/webp/18.webp', 'июнь-июль 2023', 'Горячие асфальтобетонные смеси')
+                +object('images/webp/15.webp', 'июнь-июль 2023', 'Горячие асфальтобетонные смеси')
+                +object('images/webp/16.webp', 'июнь-июль 2023', 'Горячие асфальтобетонные смеси')
+                +object('images/webp/17.webp', 'июнь-июль 2023', 'Горячие асфальтобетонные смеси')
+                +object('images/webp/18.webp', 'июнь-июль 2023', 'Горячие асфальтобетонные смеси')
 
     a.button.border.mobile смотреть все объекты

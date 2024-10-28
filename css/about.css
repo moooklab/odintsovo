@@ -343,6 +343,10 @@ section.team div.swiper-slide {
 section.team div.swiper-slide img {
   width: 100%;
   aspect-ratio: 3/4;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
 }
 section.team div.swiper-slide div.text {
   display: grid;
