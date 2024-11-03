@@ -9,6 +9,7 @@ section.prices h1 {
 section.prices div.tabs {
   display: grid;
   grid-gap: 52px;
+  max-width: 1490px;
 }
 @media (max-width: 960px) {
   section.prices div.tabs {
@@ -36,9 +37,15 @@ section.prices div.tabs_captions div.overflow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-items: stretch;
   gap: 10px;
+}
+@media (max-width: 1280px) {
+  section.prices div.tabs_captions div.overflow {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    justify-items: flex-start;
+  }
 }
 @media (max-width: 960px) {
   section.prices div.tabs_captions div.overflow {
@@ -49,13 +56,28 @@ section.prices div.tabs_captions div.overflow {
 }
 section.prices div.tabs_captions div.tab_caption {
   cursor: pointer;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 1px solid #1d1d1b;
-  padding: 16px 26px;
+  padding: 13px 22px;
   font-weight: 400;
   font-size: 14px;
   line-height: 130%;
   letter-spacing: 0.01em;
   text-transform: uppercase;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+}
+@media (max-width: 1280px) {
+  section.prices div.tabs_captions div.tab_caption {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
 }
 @media (max-width: 960px) {
   section.prices div.tabs_captions div.tab_caption {
@@ -78,7 +100,6 @@ section.prices div.tab_content.opened {
   display: grid;
 }
 section.prices table {
-  max-width: 1490px;
   border-collapse: collapse;
   border: 1px solid rgba(29, 29, 27, 0.2);
   margin-top: 40px;
@@ -104,6 +125,21 @@ section.prices table tbody td {
 }
 section.prices table tbody td:not(:last-child) {
   border-right: 1px solid rgba(29, 29, 27, 0.2);
+}
+section.prices table tbody td:nth-child(1) {
+  width: 340px;
+}
+section.prices table tbody td:nth-child(2) {
+  width: 203px;
+}
+section.prices table tbody td:nth-child(3) {
+  width: 295px;
+}
+section.prices table tbody td:nth-child(4) {
+  width: 345px;
+}
+section.prices table tbody td:nth-child(5) {
+  width: 307px;
 }
 section.prices span.note {
   opacity: 0.7;
@@ -232,7 +268,7 @@ section.callback div.container {
     grid-gap: 10px;
   }
 }
-section.callback h2 {
+section.callback div.container > h2 {
   grid-area: Title;
 }
 section.callback div.text {
@@ -262,7 +298,8 @@ section.callback div.text div.phone {
 }
 @media (max-width: 960px) {
   section.callback div.text div.phone {
-    grid-gap: 4px;
+    grid-gap: 0px;
+    margin-bottom: 10px;
   }
 }
 section.callback div.text div.phone span {
@@ -277,6 +314,7 @@ section.callback div.text div.phone a.tel {
   font-weight: 400;
   font-size: 28px;
   line-height: 140%;
+  margin-top: 4px;
 }
 @media (max-width: 960px) {
   section.callback div.text div.phone a.tel {
@@ -296,11 +334,13 @@ section.callback div.text div.phone a.mail {
 section.callback div.text div.phone a.mail:hover {
   text-decoration: underline;
 }
-section.callback form {
+section.callback div.form {
   grid-area: Form;
+  max-width: 886px;
+}
+section.callback form {
   display: grid;
   grid-gap: 10px;
-  max-width: 886px;
 }
 section.callback form label.upload {
   display: grid;
@@ -316,6 +356,7 @@ section.callback form label.upload {
 @media (max-width: 960px) {
   section.callback form label.upload {
     grid-gap: 5px;
+    min-height: unset;
   }
 }
 section.callback form label.upload input {
@@ -384,14 +425,14 @@ section.callback form div.submit div {
     max-width: unset;
   }
 }
-section.callback form div.submit span {
+section.callback form div.submit div span {
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
   opacity: 0.5;
 }
 @media (max-width: 960px) {
-  section.callback form div.submit span {
+  section.callback form div.submit div span {
     font-size: 11px;
   }
 }
@@ -411,4 +452,51 @@ section.callback form div.submit a {
 }
 section.callback form div.submit a:hover {
   text-decoration: none;
+}
+section.callback div.success {
+  border: 1px solid rgba(29, 29, 27, 0.2);
+  width: 100%;
+  height: 419px;
+  display: none;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  text-align: center;
+  padding: 20px;
+}
+@media (max-width: 960px) {
+  section.callback div.success {
+    height: 360px;
+  }
+}
+section.callback div.success img {
+  margin-bottom: 32px;
+}
+@media (max-width: 960px) {
+  section.callback div.success img {
+    width: 125px;
+    margin-bottom: 10px;
+  }
+}
+section.callback div.success h2 {
+  margin-bottom: 16px;
+}
+@media (max-width: 960px) {
+  section.callback div.success h2 {
+    margin-bottom: 20px;
+  }
+}
+section.callback div.success span {
+  opacity: 0.8;
+}
+@media (max-width: 960px) {
+  section.callback div.success span {
+    font-size: 12px;
+  }
+}
+section.callback.success form {
+  display: none;
+}
+section.callback.success div.success {
+  display: grid;
 }/*# sourceMappingURL=delivery.css.map */

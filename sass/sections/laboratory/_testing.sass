@@ -5,8 +5,9 @@ section.testing
     padding-bottom: 80px
     background: #f8f8f8
     +screen(m)
-        margin-top: 60px
+        margin-top: 30px
         margin-bottom: 60px
+        padding-top: 30px
         padding-bottom: unset
 
     div.container
@@ -20,6 +21,8 @@ section.testing
         margin-bottom: 50px
         +screen(l)
             overflow: visible
+        +screen(m)
+            margin-bottom: 30px
         div.swiper-slide
             cursor: pointer
             position: relative
@@ -27,7 +30,7 @@ section.testing
             align-items: end
             position: relative
             aspect-ratio: 1 / 1
-            padding: 45px 20px
+            padding: 24px 20px
             +screen(m)
                 padding: 20px 10px
             img
@@ -55,6 +58,9 @@ section.testing
                 position: relative
                 color: $white
                 z-index: 3
+                min-height: 62px
+                +screen(m)
+                    min-height: unset
             &.swiper-slide-thumb-active
                 &::after
                     border: 3px solid $yellow
@@ -80,7 +86,7 @@ section.testing
                     font-size: 12px
         img.preview
             width: 100%
-            height: 533px
+            height: 100%
             object-fit: cover
             object-position: center center
             +screen(m)
@@ -102,3 +108,13 @@ section.testing
                     font-weight: 400
                     font-size: 12px
                     line-height: 130%
+
+                img
+                    +screen(m)
+                        width: 16px
+                        height: 16px
+
+                &:last-child
+                    padding-bottom: unset
+                    +screen(m)
+                        padding-bottom: 31px

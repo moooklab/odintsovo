@@ -9,21 +9,28 @@ section.callback
                 a(href="tel:+7 812 777-89-84").tel +7 812 777-89-84
                 a(href="mailto: info@abz.ru").mail info@abz.ru
 
-        form(action="index.html")
-            input(type="text", name="name" placeholder="Ваше Имя", required)
-            input(type="tel", name="phone", placeholder="Телефон", required)
-            input(type="mail", name="email", placeholder="Email")
-            textarea(name="message", placeholder="Сообщение")
+        div(onsubmit="event.preventDefault(); this.closest('section.callback').classList.add('success')").form
+            form(action="index.html")
+                input(type="text", name="name" placeholder="Ваше Имя*", required)
+                input(type="tel", name="phone", placeholder="Телефон*", required)
+                input(type="mail", name="email", placeholder="Email")
+                textarea(name="message", placeholder="Сообщение")
 
-            label.upload
-                img(src="images/upload.svg", alt="").upload
-                input(type="file", name="", onchange="upload(this)")
-                span.name
-                span.default Приложить файл (до 10 Мб)
-                img(src="images/cross.svg", alt="", onclick="resetUpload(event, this)").cross
+                label.upload
+                    img(src="images/upload.svg", alt="").upload
+                    input(type="file", name="", onchange="upload(this)")
+                    span.name
+                    span.default Приложить файл (до 10 Мб)
+                    img(src="images/cross.svg", alt="", onclick="resetUpload(event, this)").cross
 
-            div.submit
-                button.yellow отправить сообщение
-                div
-                    span Нажимая кнопку «Отправить сообщение», вы даёте своё согласие на 
-                    a(href="personal.html") обработку персональных данных
+                div.submit
+                    button.yellow
+                        span отправить сообщение
+                    div
+                        span Нажимая кнопку «Отправить сообщение», вы даёте своё согласие на 
+                        a(href="personal.html") обработку персональных данных
+
+            div.success
+                img(src="images/success.webp", alt="")
+                h2 Заявка успешно оправлена!
+                span Мы свяжемся с вами в ближайшее время

@@ -41,12 +41,13 @@ dialog[data-modal-name=object]
 
     div.swiper-navigation
         position: absolute
-        top: calc(50% - 10px)
+        top: 50%
         left: 20px
         width: calc(100% - 40px)
         z-index: 999
         pointer-events: none
         justify-content: space-between
+        transform: translateY(-50%)
         div.arrow
             pointer-events: auto
             background: $white
@@ -65,6 +66,7 @@ dialog[data-modal-name=object]
         margin-top: 40px
         +screen(m)
             margin-top: 20px
+            font-size: 12px
 
     div.params
         display: grid
@@ -80,6 +82,7 @@ dialog[data-modal-name=object]
             padding-bottom: 20px
             margin-bottom: 20px
             margin-top: 14px
+            grid-gap: 17px
         div.param
             display: grid
             grid-template-columns: auto 1fr auto

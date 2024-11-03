@@ -8,6 +8,7 @@ section.prices
     div.tabs
         display: grid
         grid-gap: 52px
+        max-width: 1490px
         +screen(m)
             display: none
             grid-gap: 30px
@@ -28,20 +29,30 @@ section.prices
 
         div.overflow
             display: flex
-            flex-wrap: wrap
+            // flex-wrap: wrap
+            justify-items: stretch
             gap: 10px
+            +screen(l)
+                flex-wrap: wrap
+                justify-items: flex-start
             +screen(m)
                 width: max-content
 
         div.tab_caption
             cursor: pointer
+            display: grid
+            align-items: center
             border: 1px solid $black
-            padding: 16px 26px
+            padding: 13px 22px
             font-weight: 400
             font-size: 14px
             line-height: 130%
             letter-spacing: 0.01em
             text-transform: uppercase
+            flex-grow: 1
+            text-align: center
+            +screen(l)
+                flex-grow: 0
             +screen(m)
                 font-size: 12px
                 padding: 12px 26px
@@ -60,7 +71,6 @@ section.prices
             display: grid
 
     table
-        max-width: 1490px
         border-collapse: collapse
         border: 1px solid rgba(29, 29, 27, 0.2)
         margin-top: 40px
@@ -86,6 +96,18 @@ section.prices
                 font-size: 20px
                 &:not(:last-child)
                     border-right: 1px solid rgba(29, 29, 27, 0.2)
+
+                &:nth-child(1)
+                    width: 340px
+                &:nth-child(2)
+                    width: 203px
+                &:nth-child(3)
+                    width: 295px
+                &:nth-child(4)
+                    width: 345px
+                &:nth-child(5)
+                    width: 307px
+
 
     span.note
         opacity: 0.7

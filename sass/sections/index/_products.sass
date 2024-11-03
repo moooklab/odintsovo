@@ -50,8 +50,15 @@ section.products
         display: grid
         align-content: start
         grid-gap: 15px
+        +screen(m)
+            grid-gap: 10px
         img
             width: 100%
             aspect-ratio: 1 / 1
             object-fit: cover
             object-position: center center
+            transition: all .3s
+            border: 0px solid #FFCD00
+        &:hover
+            img
+                border: 10px solid #FFCD00

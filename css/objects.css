@@ -30,10 +30,12 @@ section.main div.swiper.texts div.swiper-slide h1 {
   left: 0;
   color: #fff;
   max-width: 560px;
+  font-size: 40px;
 }
 @media (max-width: 960px) {
   section.main div.swiper.texts div.swiper-slide h1 {
     top: 60px;
+    font-size: 24px;
   }
 }
 section.main div.swiper.texts div.swiper-slide span {
@@ -176,7 +178,7 @@ section.objects {
 }
 @media (max-width: 960px) {
   section.objects {
-    margin-top: 60px;
+    margin-top: 30px;
   }
 }
 section.objects div.filter {
@@ -190,7 +192,7 @@ section.objects div.filter {
       flex-wrap: wrap;
   gap: 30px 40px;
   margin-top: 32px;
-  margin-bottom: 32px;
+  margin-bottom: 39px;
 }
 @media (max-width: 960px) {
   section.objects div.filter {
@@ -320,6 +322,11 @@ section.objects div.years div.year div.object {
       align-content: start;
   grid-gap: 15px;
 }
+@media (max-width: 960px) {
+  section.objects div.years div.year div.object {
+    grid-gap: 10px;
+  }
+}
 section.objects div.years div.year div.object img {
   width: 100%;
   height: 562px;
@@ -327,6 +334,9 @@ section.objects div.years div.year div.object img {
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 0px solid #FFCD00;
 }
 @media (max-width: 1280px) {
   section.objects div.years div.year div.object img {
@@ -342,6 +352,9 @@ section.objects div.years div.year div.object img {
   section.objects div.years div.year div.object img {
     height: 180px;
   }
+}
+section.objects div.years div.year div.object:hover img {
+  border: 10px solid #FFCD00;
 }
 @media (max-width: 640px) {
   section.objects div.years div.year div.object h2 {
@@ -385,6 +398,11 @@ section.clients div.container {
           align-items: end;
   margin-bottom: 30px;
 }
+@media (max-width: 960px) {
+  section.clients div.container {
+    margin-bottom: 25px;
+  }
+}
 section.clients div.text {
   display: grid;
   grid-gap: 32px;
@@ -427,7 +445,7 @@ section.clients div.slider div.swiper {
   min-width: 0;
   overflow: visible;
   max-width: 1770px;
-  height: 240px;
+  height: 233px;
 }
 @media (max-width: 960px) {
   section.clients div.slider div.swiper {
@@ -546,7 +564,7 @@ section.callback div.container {
     grid-gap: 10px;
   }
 }
-section.callback h2 {
+section.callback div.container > h2 {
   grid-area: Title;
 }
 section.callback div.text {
@@ -576,7 +594,8 @@ section.callback div.text div.phone {
 }
 @media (max-width: 960px) {
   section.callback div.text div.phone {
-    grid-gap: 4px;
+    grid-gap: 0px;
+    margin-bottom: 10px;
   }
 }
 section.callback div.text div.phone span {
@@ -591,6 +610,7 @@ section.callback div.text div.phone a.tel {
   font-weight: 400;
   font-size: 28px;
   line-height: 140%;
+  margin-top: 4px;
 }
 @media (max-width: 960px) {
   section.callback div.text div.phone a.tel {
@@ -610,11 +630,13 @@ section.callback div.text div.phone a.mail {
 section.callback div.text div.phone a.mail:hover {
   text-decoration: underline;
 }
-section.callback form {
+section.callback div.form {
   grid-area: Form;
+  max-width: 886px;
+}
+section.callback form {
   display: grid;
   grid-gap: 10px;
-  max-width: 886px;
 }
 section.callback form label.upload {
   display: grid;
@@ -630,6 +652,7 @@ section.callback form label.upload {
 @media (max-width: 960px) {
   section.callback form label.upload {
     grid-gap: 5px;
+    min-height: unset;
   }
 }
 section.callback form label.upload input {
@@ -698,14 +721,14 @@ section.callback form div.submit div {
     max-width: unset;
   }
 }
-section.callback form div.submit span {
+section.callback form div.submit div span {
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
   opacity: 0.5;
 }
 @media (max-width: 960px) {
-  section.callback form div.submit span {
+  section.callback form div.submit div span {
     font-size: 11px;
   }
 }
@@ -725,4 +748,51 @@ section.callback form div.submit a {
 }
 section.callback form div.submit a:hover {
   text-decoration: none;
+}
+section.callback div.success {
+  border: 1px solid rgba(29, 29, 27, 0.2);
+  width: 100%;
+  height: 419px;
+  display: none;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  text-align: center;
+  padding: 20px;
+}
+@media (max-width: 960px) {
+  section.callback div.success {
+    height: 360px;
+  }
+}
+section.callback div.success img {
+  margin-bottom: 32px;
+}
+@media (max-width: 960px) {
+  section.callback div.success img {
+    width: 125px;
+    margin-bottom: 10px;
+  }
+}
+section.callback div.success h2 {
+  margin-bottom: 16px;
+}
+@media (max-width: 960px) {
+  section.callback div.success h2 {
+    margin-bottom: 20px;
+  }
+}
+section.callback div.success span {
+  opacity: 0.8;
+}
+@media (max-width: 960px) {
+  section.callback div.success span {
+    font-size: 12px;
+  }
+}
+section.callback.success form {
+  display: none;
+}
+section.callback.success div.success {
+  display: grid;
 }/*# sourceMappingURL=objects.css.map */

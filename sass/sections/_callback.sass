@@ -18,8 +18,8 @@ section.callback
             grid-template-columns: 1fr
             grid-gap: 10px
 
-    h2
-        grid-area: Title
+        & > h2
+            grid-area: Title
 
     div.text
         grid-area: Text
@@ -40,7 +40,8 @@ section.callback
             display: grid
             grid-gap: 5px
             +screen(m)
-                grid-gap: 4px
+                grid-gap: 0px
+                margin-bottom: 10px
 
             span
                 font-weight: 400
@@ -53,6 +54,7 @@ section.callback
                 font-weight: 400
                 font-size: 28px
                 line-height: 140%
+                margin-top: 4px
                 +screen(m)
                     font-size: 20px
             a.mail
@@ -64,11 +66,13 @@ section.callback
                 &:hover
                     text-decoration: underline
 
-    form
+    div.form
         grid-area: Form
+        max-width: 886px
+
+    form
         display: grid
         grid-gap: 10px
-        max-width: 886px
 
         label.upload
             display: grid
@@ -79,6 +83,7 @@ section.callback
             min-height: 49px
             +screen(m)
                 grid-gap: 5px
+                min-height: unset
             input
                 display: none
             img.upload
@@ -128,13 +133,13 @@ section.callback
                 +screen(s)
                     max-width: unset
 
-            span
-                font-weight: 400
-                font-size: 14px
-                line-height: 140%
-                opacity: 0.5
-                +screen(m)
-                    font-size: 11px
+                span
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 140%
+                    opacity: 0.5
+                    +screen(m)
+                        font-size: 11px
 
             a
                 font-weight: 400
@@ -147,3 +152,36 @@ section.callback
                     font-size: 11px
                 &:hover
                     text-decoration: none
+
+    div.success
+        border: 1px solid rgba(29, 29, 27, 0.2)
+        width: 100%
+        height: 419px
+        display: none
+        align-content: center
+        justify-items: center
+        text-align: center
+        padding: 20px
+        +screen(m)
+            height: 360px
+        img
+            margin-bottom: 32px
+            +screen(m)
+                width: 125px
+                margin-bottom: 10px
+        h2
+            margin-bottom: 16px
+            +screen(m)
+                margin-bottom: 20px
+        span
+            opacity: 0.8
+            +screen(m)
+                font-size: 12px
+
+    &.success
+        form
+            display: none
+        div.success
+            display: grid        
+
+

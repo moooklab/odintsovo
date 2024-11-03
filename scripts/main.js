@@ -62,7 +62,7 @@ const clientSlider = new Swiper(document.querySelector('section.clients div.swip
 })
 
 const documentSlider = new Swiper(document.querySelector('section.documents div.swiper'), {
-    slidesPerView: 2.1,
+    slidesPerView: 2,
     spaceBetween: 12,
     navigation: {
         prevEl: document.querySelector('section.documents div.swiper-navigation div.arrow:first-child'),
@@ -85,7 +85,7 @@ const documentSlider = new Swiper(document.querySelector('section.documents div.
 const objectSlider = new Swiper(document.querySelector('section.objects div.swiper'), {
     slidesPerView: 1,
     spaceBetween: 20,
-    freeMode: true,
+    // freeMode: true,
     breakpoints: {
         1280: {
             slidesPerView: 3
@@ -100,7 +100,7 @@ const objectSlider = new Swiper(document.querySelector('section.objects div.swip
 })
 
 const teamSlider = new Swiper(document.querySelector('section.team div.swiper'), {
-    slidesPerView: 1.5,
+    slidesPerView: 1.6,
     spaceBetween: 10,
     navigation: {
         prevEl: document.querySelector('section.team div.swiper-navigation div.arrow:first-child'),
@@ -125,16 +125,15 @@ const teamSlider = new Swiper(document.querySelector('section.team div.swiper'),
 })
 
 const testSliderCaption = new Swiper(document.querySelector('section.testing div.swiper.captions'), {
-    slidesPerView: 1.5,
+    slidesPerView: 1.65,
     spaceBetween: 10,
     breakpoints: {
         480: {
-            slidesPerView: 2.5
-        },
-        640: {
-            slidesPerView: 3.5
+            slidesPerView: 2.5,
+            spaceBetween: 10
         },
         960: {
+            slidesPerView: 3.5,
             spaceBetween: 15
         },
         1280: {

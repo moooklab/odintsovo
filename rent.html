@@ -104,11 +104,11 @@
                     <div class="breadcrumbs"><a href="index.html">Главная</a>
                         <div class="dot"></div><span>Аренда спецтехники</span>
                     </div>
-                    <div class="links"><a href="about.html">О компании</a><a href="construction.html">Строительство дорог</a><a class="opened" href="rent.html">Аренда спецтехники</a></div>
+                    <div class="about_links"><a href="about.html">О компании</a><a href="construction.html">Строительство дорог</a><a class="opened" href="rent.html">Аренда спецтехники</a></div>
                     <div class="description">
                         <h1>Аренда спецтехники</h1>
                         <div class="text"><span>Предлагаем строительную и дорожную спецтехнику в Москве и Московской области на любой срок. Аренда спецтехники — это удобный и экономически выгодный способ обеспечить себе необходимое оборудование для строительных, дорожных или других видов работ. Благодаря аренде вы можете получить доступ к широкому выбору техники без необходимости приобретения и обслуживания собственного парка машин.</span>
-                            <div class="buttons"><a class="button yellow" href="images/image.webp" download>Скачать прайс</a><a class="button border" href="index.html">Посмотреть всю спецтехнику</a></div>
+                            <div class="buttons"><a class="button yellow" href="images/image.webp" download><span>Скачать прайс</span></a><a class="button border" href="index.html">Посмотреть всю спецтехнику</a></div>
                         </div>
                     </div>
                 </div>
@@ -182,19 +182,24 @@
                         <p>Заполните поля формы и отправьте заявку. Мы свяжемся с вами в ближайшее время</p>
                         <div class="phone"><span>Отдел продаж:</span><a class="tel" href="tel:+7 812 777-89-84">+7 812 777-89-84</a><a class="mail" href="mailto: info@abz.ru">info@abz.ru</a></div>
                     </div>
-                    <form action="index.html">
-                        <input type="text" name="name" placeholder="Ваше Имя" required>
-                        <input type="tel" name="phone" placeholder="Телефон" required>
-                        <input type="mail" name="email" placeholder="Email">
-                        <textarea name="message" placeholder="Сообщение"></textarea>
-                        <label class="upload"><img class="upload" src="images/upload.svg" alt="">
-                            <input type="file" name="" onchange="upload(this)"><span class="name"></span><span class="default">Приложить файл (до 10 Мб)</span><img class="cross" src="images/cross.svg" alt="" onclick="resetUpload(event, this)">
-                        </label>
-                        <div class="submit">
-                            <button class="yellow">отправить сообщение</button>
-                            <div><span>Нажимая кнопку «Отправить сообщение», вы даёте своё согласие на </span><a href="personal.html">обработку персональных данных</a></div>
+                    <div class="form" onsubmit="event.preventDefault(); this.closest('section.callback').classList.add('success')">
+                        <form action="index.html">
+                            <input type="text" name="name" placeholder="Ваше Имя*" required>
+                            <input type="tel" name="phone" placeholder="Телефон*" required>
+                            <input type="mail" name="email" placeholder="Email">
+                            <textarea name="message" placeholder="Сообщение"></textarea>
+                            <label class="upload"><img class="upload" src="images/upload.svg" alt="">
+                                <input type="file" name="" onchange="upload(this)"><span class="name"></span><span class="default">Приложить файл (до 10 Мб)</span><img class="cross" src="images/cross.svg" alt="" onclick="resetUpload(event, this)">
+                            </label>
+                            <div class="submit">
+                                <button class="yellow"><span>отправить сообщение</span></button>
+                                <div><span>Нажимая кнопку «Отправить сообщение», вы даёте своё согласие на </span><a href="personal.html">обработку персональных данных</a></div>
+                            </div>
+                        </form>
+                        <div class="success"><img src="images/success.webp" alt="">
+                            <h2>Заявка успешно оправлена!</h2><span>Мы свяжемся с вами в ближайшее время</span>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </section>
         </main>

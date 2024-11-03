@@ -328,6 +328,7 @@ section.advantages div.masonry div.item {
 @media (max-width: 960px) {
   section.advantages div.masonry div.item {
     padding: 10px;
+    grid-gap: 10px;
   }
 }
 section.advantages div.masonry div.item img {
@@ -424,7 +425,7 @@ section.advantages div.masonry div.item span {
 
 section.about {
   background: #F8F8F8;
-  padding-top: 80px;
+  padding-top: 140px;
   padding-bottom: 80px;
 }
 @media (max-width: 960px) {
@@ -477,6 +478,12 @@ section.about div.description p {
 }
 section.about div.description h2 {
   grid-area: Title;
+  padding-top: 32px;
+}
+@media (max-width: 960px) {
+  section.about div.description h2 {
+    padding-top: 0px;
+  }
 }
 section.about div.description div.text {
   grid-area: Text;
@@ -674,6 +681,11 @@ section.products a.product {
       align-content: start;
   grid-gap: 15px;
 }
+@media (max-width: 960px) {
+  section.products a.product {
+    grid-gap: 10px;
+  }
+}
 section.products a.product img {
   width: 100%;
   aspect-ratio: 1/1;
@@ -681,6 +693,12 @@ section.products a.product img {
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 0px solid #FFCD00;
+}
+section.products a.product:hover img {
+  border: 10px solid #FFCD00;
 }
 
 section.objects {
@@ -799,6 +817,11 @@ section.objects div.slider a.object span.date {
   text-transform: uppercase;
   opacity: 0.5;
 }
+@media (max-width: 960px) {
+  section.objects div.slider a.object h3 {
+    font-size: 14px;
+  }
+}
 section.objects div.slider a.object strong {
   font-weight: 600;
   font-size: 14px;
@@ -847,6 +870,11 @@ section.clients div.container {
           align-items: end;
   margin-bottom: 30px;
 }
+@media (max-width: 960px) {
+  section.clients div.container {
+    margin-bottom: 25px;
+  }
+}
 section.clients div.text {
   display: grid;
   grid-gap: 32px;
@@ -889,7 +917,7 @@ section.clients div.slider div.swiper {
   min-width: 0;
   overflow: visible;
   max-width: 1770px;
-  height: 240px;
+  height: 233px;
 }
 @media (max-width: 960px) {
   section.clients div.slider div.swiper {
@@ -1008,7 +1036,7 @@ section.callback div.container {
     grid-gap: 10px;
   }
 }
-section.callback h2 {
+section.callback div.container > h2 {
   grid-area: Title;
 }
 section.callback div.text {
@@ -1038,7 +1066,8 @@ section.callback div.text div.phone {
 }
 @media (max-width: 960px) {
   section.callback div.text div.phone {
-    grid-gap: 4px;
+    grid-gap: 0px;
+    margin-bottom: 10px;
   }
 }
 section.callback div.text div.phone span {
@@ -1053,6 +1082,7 @@ section.callback div.text div.phone a.tel {
   font-weight: 400;
   font-size: 28px;
   line-height: 140%;
+  margin-top: 4px;
 }
 @media (max-width: 960px) {
   section.callback div.text div.phone a.tel {
@@ -1072,11 +1102,13 @@ section.callback div.text div.phone a.mail {
 section.callback div.text div.phone a.mail:hover {
   text-decoration: underline;
 }
-section.callback form {
+section.callback div.form {
   grid-area: Form;
+  max-width: 886px;
+}
+section.callback form {
   display: grid;
   grid-gap: 10px;
-  max-width: 886px;
 }
 section.callback form label.upload {
   display: grid;
@@ -1092,6 +1124,7 @@ section.callback form label.upload {
 @media (max-width: 960px) {
   section.callback form label.upload {
     grid-gap: 5px;
+    min-height: unset;
   }
 }
 section.callback form label.upload input {
@@ -1160,14 +1193,14 @@ section.callback form div.submit div {
     max-width: unset;
   }
 }
-section.callback form div.submit span {
+section.callback form div.submit div span {
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
   opacity: 0.5;
 }
 @media (max-width: 960px) {
-  section.callback form div.submit span {
+  section.callback form div.submit div span {
     font-size: 11px;
   }
 }
@@ -1187,6 +1220,53 @@ section.callback form div.submit a {
 }
 section.callback form div.submit a:hover {
   text-decoration: none;
+}
+section.callback div.success {
+  border: 1px solid rgba(29, 29, 27, 0.2);
+  width: 100%;
+  height: 419px;
+  display: none;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  text-align: center;
+  padding: 20px;
+}
+@media (max-width: 960px) {
+  section.callback div.success {
+    height: 360px;
+  }
+}
+section.callback div.success img {
+  margin-bottom: 32px;
+}
+@media (max-width: 960px) {
+  section.callback div.success img {
+    width: 125px;
+    margin-bottom: 10px;
+  }
+}
+section.callback div.success h2 {
+  margin-bottom: 16px;
+}
+@media (max-width: 960px) {
+  section.callback div.success h2 {
+    margin-bottom: 20px;
+  }
+}
+section.callback div.success span {
+  opacity: 0.8;
+}
+@media (max-width: 960px) {
+  section.callback div.success span {
+    font-size: 12px;
+  }
+}
+section.callback.success form {
+  display: none;
+}
+section.callback.success div.success {
+  display: grid;
 }
 
 section.advantages div.text {

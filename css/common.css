@@ -218,6 +218,7 @@ h3 {
 }
 
 button, a.button {
+  position: relative;
   cursor: pointer;
   display: block;
   padding: 16px 24px;
@@ -232,7 +233,7 @@ button, a.button {
 }
 @media (max-width: 960px) {
   button, a.button {
-    padding: 12px 24px;
+    padding: 12px 25px;
     font-size: 12px;
   }
 }
@@ -241,8 +242,69 @@ button.yellow, a.button.yellow {
   outline: 1px solid #ffcd00;
   color: #1d1d1b;
 }
+button.yellow::before, a.button.yellow::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 1px;
+  width: 0;
+  background: #000;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+button.yellow::after, a.button.yellow::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 1px;
+  background: #000;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+button.yellow span::before, a.button.yellow span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background: #000;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+button.yellow span::after, a.button.yellow span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 1px;
+  background: #000;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
 button.yellow:hover, a.button.yellow:hover {
-  background: #FFBB00;
+  background: transparent;
+  outline: none;
+}
+button.yellow:hover::before, a.button.yellow:hover::before {
+  width: 100%;
+}
+button.yellow:hover::after, a.button.yellow:hover::after {
+  height: 100%;
+}
+button.yellow:hover span::before, a.button.yellow:hover span::before {
+  width: 100%;
+}
+button.yellow:hover span::after, a.button.yellow:hover span::after {
+  height: 100%;
 }
 button.border, a.button.border {
   outline: 1px solid #1d1d1b;
@@ -369,6 +431,15 @@ div.swiper-navigation div.arrow {
   width: 55px;
   height: 55px;
 }
+@media (max-width: 960px) {
+  div.swiper-navigation div.arrow {
+    width: 43px;
+    height: 43px;
+  }
+  div.swiper-navigation div.arrow svg {
+    width: 21px;
+  }
+}
 div.swiper-navigation div.arrow.swiper-button-disabled {
   pointer-events: none;
   opacity: 0.3;
@@ -394,6 +465,7 @@ div.pagination {
 @media (max-width: 960px) {
   div.pagination {
     grid-gap: 20px;
+    margin-top: 20px;
   }
 }
 div.pagination div.pages {
@@ -433,6 +505,65 @@ div.pagination div.pages a.arrow:hover svg path {
   }
 }
 
+div.about_links {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  border: 1px solid rgba(29, 29, 27, 0.2);
+  margin-bottom: 80px;
+}
+@media (max-width: 960px) {
+  div.about_links {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 640px) {
+  div.about_links {
+    grid-auto-flow: row;
+    grid-gap: 10px;
+    border: unset;
+  }
+}
+div.about_links a {
+  position: relative;
+  display: block;
+  padding: 28px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-align: center;
+}
+div.about_links a:not(:first-child)::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 100%;
+  height: calc(100% - 20px);
+  width: 1px;
+  background: rgba(29, 29, 27, 0.2);
+}
+@media (max-width: 960px) {
+  div.about_links a {
+    font-size: 12px;
+    padding: 12px;
+  }
+}
+@media (max-width: 640px) {
+  div.about_links a {
+    border: 1px solid rgba(29, 29, 27, 0.2);
+  }
+}
+div.about_links a.opened {
+  pointer-events: none;
+  background: #1d1d1b;
+  color: #fff;
+}
+div.about_links a:hover {
+  background: #f8f8f8;
+}
+
 [class*=ymaps-2][class*=-ground-pane] {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
@@ -461,6 +592,8 @@ header div.container {
   grid-gap: 30px;
   padding-top: 40px;
   padding-bottom: 33px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 @media (max-width: 1280px) {
   header div.container {
@@ -750,6 +883,21 @@ header.transparent div.contact div.price:hover img.white {
     stroke: white;
   }
 }
+header.transparent div.contact button.yellow::before {
+  background: #fff;
+}
+header.transparent div.contact button.yellow::after {
+  background: #fff;
+}
+header.transparent div.contact button.yellow span::before {
+  background: #fff;
+}
+header.transparent div.contact button.yellow span::after {
+  background: #fff;
+}
+header.transparent div.contact button.yellow:hover {
+  color: #fff;
+}
 header.transparent div.mobile_menu {
   border: 1px solid #fff;
 }
@@ -760,8 +908,76 @@ header.sticky {
   -webkit-box-shadow: 0 4px 22px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 22px rgba(0, 0, 0, 0.1);
 }
+header.sticky div.container {
+  padding-top: 17px;
+}
 header.sticky div.container::after {
   width: 0;
+}
+header:has(.mobile_menu.opened) {
+  background: white;
+}
+header:has(.mobile_menu.opened) div.container::after {
+  background: rgba(29, 29, 27, 0.5);
+}
+header:has(.mobile_menu.opened) a.logotype svg path {
+  fill: #1d1d1b;
+}
+header:has(.mobile_menu.opened) div.contact div.price {
+  outline: 1px solid #1d1d1b;
+}
+header:has(.mobile_menu.opened) div.contact div.price img.black {
+  display: block;
+}
+header:has(.mobile_menu.opened) div.contact div.price img.white {
+  display: none;
+}
+header:has(.mobile_menu.opened) div.contact div.price:hover {
+  outline: 1px solid #ffcd00;
+  color: #1d1d1b;
+}
+header:has(.mobile_menu.opened) div.contact div.price:hover img.black {
+  display: block;
+}
+header:has(.mobile_menu.opened) div.contact div.price:hover img.white {
+  display: none;
+}
+@media (max-width: 1600px) {
+  header:has(.mobile_menu.opened) div.contact a.phone {
+    border: 1px solid #1d1d1b;
+  }
+  header:has(.mobile_menu.opened) div.contact a.phone svg path {
+    stroke: #1d1d1b;
+  }
+}
+header:has(.mobile_menu.opened) div.contact button.yellow::before {
+  background: #1d1d1b;
+}
+header:has(.mobile_menu.opened) div.contact button.yellow::after {
+  background: #1d1d1b;
+}
+header:has(.mobile_menu.opened) div.contact button.yellow span::before {
+  background: #1d1d1b;
+}
+header:has(.mobile_menu.opened) div.contact button.yellow span::after {
+  background: #1d1d1b;
+}
+header:has(.mobile_menu.opened) div.contact button.yellow:hover {
+  color: #1d1d1b;
+}
+header:has(.mobile_menu.opened) div.mobile_menu {
+  border: 1px solid #1d1d1b;
+}
+header:has(.mobile_menu.opened) div.mobile_menu svg path {
+  stroke: #1d1d1b;
+}
+header:has(.mobile_menu.opened) + section.menu {
+  top: 87px;
+}
+@media (max-width: 640px) {
+  header:has(.mobile_menu.opened) + section.menu {
+    top: 63px;
+  }
 }
 
 section.menu {
@@ -849,6 +1065,10 @@ section.menu a.phone {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+section.menu a.phone svg {
+  width: 15px;
+  height: 15px;
+}
 section.menu a.phone svg path {
   stroke: #ffcd00;
 }
@@ -856,6 +1076,7 @@ section.menu a.phone span {
   -webkit-text-decoration: underline dotted 0.5px;
           text-decoration: underline dotted 0.5px;
   text-underline-offset: 4px;
+  font-size: 12px;
 }
 section.menu a.phone:hover span {
   text-decoration: unset;
@@ -1155,7 +1376,7 @@ footer div.container.top div.contacts div.adress p {
 }
 @media (max-width: 960px) {
   footer div.container.top div.contacts div.adress p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 footer div.container.top div.contacts div.phone {
@@ -1164,7 +1385,7 @@ footer div.container.top div.contacts div.phone {
 }
 @media (max-width: 960px) {
   footer div.container.top div.contacts div.phone {
-    grid-gap: 4px;
+    grid-gap: 0px;
   }
 }
 footer div.container.top div.contacts div.phone a.tel {
@@ -1175,6 +1396,7 @@ footer div.container.top div.contacts div.phone a.tel {
 @media (max-width: 960px) {
   footer div.container.top div.contacts div.phone a.tel {
     font-size: 20px;
+    margin-top: 4px;
   }
 }
 footer div.container.top div.contacts div.phone a.mail {
@@ -1354,6 +1576,7 @@ dialog[data-modal-name=proposal] div.container {
   padding: 40px;
   padding-top: 60px;
   max-width: 875px;
+  width: 100%;
   -ms-flex-item-align: center;
       align-self: center;
 }
@@ -1610,7 +1833,7 @@ dialog[data-modal-name=object] div.slider {
 }
 dialog[data-modal-name=object] div.swiper-navigation {
   position: absolute;
-  top: calc(50% - 10px);
+  top: 50%;
   left: 20px;
   width: calc(100% - 40px);
   z-index: 999;
@@ -1618,6 +1841,9 @@ dialog[data-modal-name=object] div.swiper-navigation {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 dialog[data-modal-name=object] div.swiper-navigation div.arrow {
   pointer-events: auto;
@@ -1639,6 +1865,7 @@ dialog[data-modal-name=object] h2 {
 @media (max-width: 960px) {
   dialog[data-modal-name=object] h2 {
     margin-top: 20px;
+    font-size: 12px;
   }
 }
 dialog[data-modal-name=object] div.params {
@@ -1657,6 +1884,7 @@ dialog[data-modal-name=object] div.params {
     padding-bottom: 20px;
     margin-bottom: 20px;
     margin-top: 14px;
+    grid-gap: 17px;
   }
 }
 dialog[data-modal-name=object] div.params div.param {

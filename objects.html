@@ -108,16 +108,16 @@
                     <div class="swiper texts">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <h1>1Набережная Макарова</h1><span>1Один из крупнейших поставщиков высококачественных асфальтобетонных смесей в России, лидер Северо-Западного региона, старейшее предприятие Группы компаний «АБЗ-1», ведущее историю с 1932 года.</span>
+                                <h1>Набережная <br>Макарова</h1><span>1Один из крупнейших поставщиков высококачественных асфальтобетонных смесей в России, лидер Северо-Западного региона, старейшее предприятие Группы компаний «АБЗ-1», ведущее историю с 1932 года.</span>
                             </div>
                             <div class="swiper-slide">
-                                <h1>2Набережная Макарова</h1><span>2Один из крупнейших поставщиков высококачественных асфальтобетонных смесей в России, лидер Северо-Западного региона, старейшее предприятие Группы компаний «АБЗ-1», ведущее историю с 1932 года.</span>
+                                <h1>Набережная <br>Макарова</h1><span>2Один из крупнейших поставщиков высококачественных асфальтобетонных смесей в России, лидер Северо-Западного региона, старейшее предприятие Группы компаний «АБЗ-1», ведущее историю с 1932 года.</span>
                             </div>
                             <div class="swiper-slide">
-                                <h1>3Набережная Макарова</h1><span>3Один из крупнейших поставщиков высококачественных асфальтобетонных смесей в России, лидер Северо-Западного региона, старейшее предприятие Группы компаний «АБЗ-1», ведущее историю с 1932 года.</span>
+                                <h1>Набережная <br>Макарова</h1><span>3Один из крупнейших поставщиков высококачественных асфальтобетонных смесей в России, лидер Северо-Западного региона, старейшее предприятие Группы компаний «АБЗ-1», ведущее историю с 1932 года.</span>
                             </div>
                             <div class="swiper-slide">
-                                <h1>4Набережная Макарова</h1><span>4Один из крупнейших поставщиков высококачественных асфальтобетонных смесей в России, лидер Северо-Западного региона, старейшее предприятие Группы компаний «АБЗ-1», ведущее историю с 1932 года.</span>
+                                <h1>Набережная <br>Макарова</h1><span>4Один из крупнейших поставщиков высококачественных асфальтобетонных смесей в России, лидер Северо-Западного региона, старейшее предприятие Группы компаний «АБЗ-1», ведущее историю с 1932 года.</span>
                             </div>
                         </div>
                     </div>
@@ -246,19 +246,24 @@
                         <p>Заполните поля формы и отправьте заявку. Мы свяжемся с вами в ближайшее время</p>
                         <div class="phone"><span>Отдел продаж:</span><a class="tel" href="tel:+7 812 777-89-84">+7 812 777-89-84</a><a class="mail" href="mailto: info@abz.ru">info@abz.ru</a></div>
                     </div>
-                    <form action="index.html">
-                        <input type="text" name="name" placeholder="Ваше Имя" required>
-                        <input type="tel" name="phone" placeholder="Телефон" required>
-                        <input type="mail" name="email" placeholder="Email">
-                        <textarea name="message" placeholder="Сообщение"></textarea>
-                        <label class="upload"><img class="upload" src="images/upload.svg" alt="">
-                            <input type="file" name="" onchange="upload(this)"><span class="name"></span><span class="default">Приложить файл (до 10 Мб)</span><img class="cross" src="images/cross.svg" alt="" onclick="resetUpload(event, this)">
-                        </label>
-                        <div class="submit">
-                            <button class="yellow">отправить сообщение</button>
-                            <div><span>Нажимая кнопку «Отправить сообщение», вы даёте своё согласие на </span><a href="personal.html">обработку персональных данных</a></div>
+                    <div class="form" onsubmit="event.preventDefault(); this.closest('section.callback').classList.add('success')">
+                        <form action="index.html">
+                            <input type="text" name="name" placeholder="Ваше Имя*" required>
+                            <input type="tel" name="phone" placeholder="Телефон*" required>
+                            <input type="mail" name="email" placeholder="Email">
+                            <textarea name="message" placeholder="Сообщение"></textarea>
+                            <label class="upload"><img class="upload" src="images/upload.svg" alt="">
+                                <input type="file" name="" onchange="upload(this)"><span class="name"></span><span class="default">Приложить файл (до 10 Мб)</span><img class="cross" src="images/cross.svg" alt="" onclick="resetUpload(event, this)">
+                            </label>
+                            <div class="submit">
+                                <button class="yellow"><span>отправить сообщение</span></button>
+                                <div><span>Нажимая кнопку «Отправить сообщение», вы даёте своё согласие на </span><a href="personal.html">обработку персональных данных</a></div>
+                            </div>
+                        </form>
+                        <div class="success"><img src="images/success.webp" alt="">
+                            <h2>Заявка успешно оправлена!</h2><span>Мы свяжемся с вами в ближайшее время</span>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </section>
         </main>

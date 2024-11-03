@@ -51,6 +51,7 @@ section.products
         grid-gap: 10px 20px
         +screen(s)
             grid-template-columns: 1fr
+            grid-gap: 20px
 
     div.product
         position: relative
@@ -222,17 +223,17 @@ section.products
                     justify-self: start
                     +screen(m)
                         margin-top: 20px
+                        width: 100%
 
         &.open
             border-bottom: unset
             border: 2px solid $black
             div.main
+
                 div.order
                     button
                         opacity: 0
                         pointer-events: none
-                        +screen(m)
-                            display: none
                     div.more
                         img
                             transform: rotate(225deg)
@@ -240,5 +241,6 @@ section.products
                 height: auto
                 z-index: 2
                 +screen(m)
-                    margin-top: -55px
+                    margin-top: -65px
+                
 

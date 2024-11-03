@@ -15,6 +15,7 @@ header
         grid-gap: 30px
         padding-top: 40px
         padding-bottom: 33px
+        transition: all .2s
         +screen(l)
             padding-top: 20px
             padding-bottom: 20px
@@ -216,6 +217,18 @@ header
                     svg
                         path
                             stroke: white
+            button.yellow
+                &::before
+                    background: $white
+                &::after
+                    background: $white
+                span
+                    &::before
+                        background: $white
+                    &::after
+                        background: $white
+                &:hover
+                    color: $white
 
         div.mobile_menu
             border: 1px solid $white
@@ -226,8 +239,63 @@ header
     &.sticky
         box-shadow: 0 4px 22px rgba(0, 0, 0, 0.1)
         div.container
+            padding-top: 17px
             &::after
                 width: 0
+
+    &:has(.mobile_menu.opened)
+        background: white
+        div.container
+            &::after
+                background: rgba(29, 29, 27, 0.5)
+
+        a.logotype
+            svg
+                path
+                    fill: $black
+        div.contact
+            div.price
+                outline: 1px solid $black
+                img.black
+                    display: block
+                img.white
+                    display: none
+                &:hover
+                    outline: 1px solid $yellow
+                    color: $black
+                    img.black
+                        display: block
+                    img.white
+                        display: none
+            a.phone
+                +screen(xl)
+                    border: 1px solid $black
+                    svg
+                        path
+                            stroke: $black
+            button.yellow
+                &::before
+                    background: $black
+                &::after
+                    background: $black
+                span
+                    &::before
+                        background: $black
+                    &::after
+                        background: $black
+                &:hover
+                    color: $black
+
+        div.mobile_menu
+            border: 1px solid $black
+            svg
+                path
+                    stroke: $black
+
+        & + section.menu
+            top: 87px
+            +screen(s)
+                top: 63px
 
 section.menu
     position: sticky
@@ -299,11 +367,14 @@ section.menu
         margin-bottom: 20px
 
         svg
+            width: 15px
+            height: 15px
             path
                 stroke: $yellow
         span
             text-decoration: underline dotted 0.5px
             text-underline-offset: 4px
+            font-size: 12px
         
         &:hover
             span
