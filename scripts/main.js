@@ -1,7 +1,7 @@
 header = document.querySelector('header')
 
 window.addEventListener('scroll', event => {
-    this.scrollY > 10 ? header.classList.add("sticky") : header.classList.remove("sticky")
+    this.scrollY > 0 ? header.classList.add("sticky") : header.classList.remove("sticky")
 })
 
 const mainCounter = (swiper) => {

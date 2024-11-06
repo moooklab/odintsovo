@@ -264,6 +264,8 @@ div.about_links
             height: calc(100% - 20px)
             width: 1px
             background: rgba(29, 29, 27, 0.2)
+            +screen(s)
+                display: none
 
         +screen(m)
             font-size: 12px
@@ -275,6 +277,31 @@ div.about_links
             pointer-events: none
             background: $black
             color: $white
+            &:first-child::after
+                display: none
+            &:last-child::before
+                display: none
+                
+            &::after
+                content: ''
+                position: absolute
+                top: 10px
+                right: 100%
+                height: calc(100% - 20px)
+                width: 1px
+                background: rgba(29, 29, 27, 0.2)
+                +screen(s)
+                    display: none
+            &::before
+                content: ''
+                position: absolute
+                top: 10px
+                left: 100%
+                height: calc(100% - 20px)
+                width: 1px
+                background: rgba(29, 29, 27, 0.2)
+                +screen(s)
+                    display: none
 
         &:hover
             background: #f8f8f8

@@ -544,6 +544,11 @@ div.about_links a:not(:first-child)::after {
   width: 1px;
   background: rgba(29, 29, 27, 0.2);
 }
+@media (max-width: 640px) {
+  div.about_links a:not(:first-child)::after {
+    display: none;
+  }
+}
 @media (max-width: 960px) {
   div.about_links a {
     font-size: 12px;
@@ -559,6 +564,40 @@ div.about_links a.opened {
   pointer-events: none;
   background: #1d1d1b;
   color: #fff;
+}
+div.about_links a.opened:first-child::after {
+  display: none;
+}
+div.about_links a.opened:last-child::before {
+  display: none;
+}
+div.about_links a.opened::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 100%;
+  height: calc(100% - 20px);
+  width: 1px;
+  background: rgba(29, 29, 27, 0.2);
+}
+@media (max-width: 640px) {
+  div.about_links a.opened::after {
+    display: none;
+  }
+}
+div.about_links a.opened::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 100%;
+  height: calc(100% - 20px);
+  width: 1px;
+  background: rgba(29, 29, 27, 0.2);
+}
+@media (max-width: 640px) {
+  div.about_links a.opened::before {
+    display: none;
+  }
 }
 div.about_links a:hover {
   background: #f8f8f8;
@@ -590,8 +629,8 @@ header div.container {
       -ms-flex-align: center;
           align-items: center;
   grid-gap: 30px;
-  padding-top: 40px;
-  padding-bottom: 33px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -909,7 +948,8 @@ header.sticky {
           box-shadow: 0 4px 22px rgba(0, 0, 0, 0.1);
 }
 header.sticky div.container {
-  padding-top: 17px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 header.sticky div.container::after {
   width: 0;
@@ -1035,7 +1075,7 @@ section.menu div.price {
   background: transparent;
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
-  margin-bottom: 20px;
+  margin-bottom: 189px;
 }
 @media (max-width: 960px) {
   section.menu div.price {
