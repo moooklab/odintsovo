@@ -775,6 +775,7 @@ section.objects a.button.mobile {
   }
 }
 section.objects div.slider {
+  position: relative;
   display: grid;
 }
 section.objects div.slider div.swiper {
@@ -848,6 +849,42 @@ section.objects div.slider a.object p {
 }
 section.objects div.slider a.object:hover div.description {
   opacity: 1;
+}
+section.objects div.swiper-navigation {
+  position: absolute;
+  top: calc((100% - 176px) / 2);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  pointer-events: none;
+  z-index: 1;
+}
+@media (max-width: 960px) {
+  section.objects div.swiper-navigation {
+    top: calc((100% - 141px) / 2);
+  }
+}
+section.objects div.swiper-navigation div.arrow {
+  border: unset;
+  background: white;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  pointer-events: auto;
+}
+section.objects div.swiper-navigation div.arrow svg path {
+  fill: #1d1d1b;
+}
+section.objects div.swiper-navigation div.arrow:hover {
+  background: #ffcd00;
 }
 
 section.clients {

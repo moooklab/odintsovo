@@ -48,6 +48,7 @@ section.objects
             margin-top: 20px
 
     div.slider
+        position: relative
         display: grid
 
         div.swiper
@@ -102,3 +103,27 @@ section.objects
                 div.description
                     opacity: 1
 
+    div.swiper-navigation
+        position: absolute
+        top: calc( (100% - 176px) / 2 )
+        transform: translateY(-50%)
+        left: 0
+        width: 100%
+        display: grid
+        grid-auto-flow: column
+        grid-auto-columns: max-content
+        justify-content: space-between
+        pointer-events: none
+        z-index: 1
+        +screen(m)
+            top: calc( (100% - 141px) / 2 )
+        div.arrow
+            border: unset
+            background: white
+            transition: all .3s
+            pointer-events: auto
+            svg
+                path
+                    fill: $black
+            &:hover
+                background: $yellow

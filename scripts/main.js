@@ -86,6 +86,10 @@ const objectSlider = new Swiper(document.querySelector('section.objects div.swip
     slidesPerView: 1,
     spaceBetween: 20,
     // freeMode: true,
+    navigation: {
+        prevEl: document.querySelector('section.objects div.swiper-navigation div.arrow:first-child'),
+        nextEl: document.querySelector('section.objects div.swiper-navigation div.arrow:last-child'),
+    },
     breakpoints: {
         1280: {
             slidesPerView: 3

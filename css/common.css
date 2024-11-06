@@ -376,6 +376,30 @@ input:focus, textarea:focus {
   border: 1px solid rgb(29, 29, 27);
 }
 
+label.text {
+  position: relative;
+}
+label.text span {
+  display: none;
+  position: absolute;
+  top: 17px;
+  left: 15px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #1d1d1b;
+  opacity: 0.45;
+}
+label.text input:invalid + span {
+  display: block;
+}
+label.text input[required] + span::after {
+  content: "*";
+  color: #E30613;
+}
+
 textarea {
   min-height: 100px;
 }

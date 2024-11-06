@@ -11,8 +11,14 @@ section.callback
 
         div(onsubmit="event.preventDefault(); this.closest('section.callback').classList.add('success')").form
             form(action="index.html")
-                input(type="text", name="name" placeholder="Ваше Имя*", required)
-                input(type="tel", name="phone", placeholder="Телефон*", required)
+                label.text
+                    input(type="text", name="name", required)
+                    span Ваше Имя
+                label.text
+                    input(type="tel", name="phone", required)
+                    span Телефон
+                //- input(type="text", name="name" placeholder="Ваше Имя*", required)
+                //- input(type="tel", name="phone", placeholder="Телефон*", required)
                 input(type="mail", name="email", placeholder="Email")
                 textarea(name="message", placeholder="Сообщение")
 

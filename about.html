@@ -308,8 +308,12 @@
                     </div>
                     <div class="form" onsubmit="event.preventDefault(); this.closest('section.callback').classList.add('success')">
                         <form action="index.html">
-                            <input type="text" name="name" placeholder="Ваше Имя*" required>
-                            <input type="tel" name="phone" placeholder="Телефон*" required>
+                            <label class="text">
+                                <input type="text" name="name" required><span>Ваше Имя</span>
+                            </label>
+                            <label class="text">
+                                <input type="tel" name="phone" required><span>Телефон</span>
+                            </label>
                             <input type="mail" name="email" placeholder="Email">
                             <textarea name="message" placeholder="Сообщение"></textarea>
                             <label class="upload"><img class="upload" src="images/upload.svg" alt="">

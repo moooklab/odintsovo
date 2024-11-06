@@ -141,6 +141,30 @@ input, textarea
     &:focus
         border: 1px solid rgba(29, 29, 27, 1)
 
+label.text
+    position: relative
+
+    span
+        display: none
+        position: absolute
+        top: 17px
+        left: 15px
+        font-weight: 400
+        font-size: 12px
+        line-height: 140%
+        letter-spacing: 0.02em
+        text-transform: uppercase
+        color: $black
+        opacity: 0.45
+
+    input:invalid + span
+        display: block
+
+    input[required] + span
+        &::after
+            content: '*'
+            color: #E30613
+
 textarea
     min-height: 100px
 
